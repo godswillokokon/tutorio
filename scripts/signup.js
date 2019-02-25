@@ -14,7 +14,7 @@ signupForm.addEventListener("submit", e => {
     .then(cred => {
       let currentUser = sessionStorage.setItem(
         "email",
-        firebase.auth().currentUser.uid
+        firebase.auth().currentUser.email
       );
       console.log(currentUser);
       console.log(cred.user);
