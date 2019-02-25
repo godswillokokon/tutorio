@@ -9,6 +9,7 @@
 //     console.log(result);
 //   });
 // });
+
 let currentUser = sessionStorage.getItem("email");
 console.log(currentUser);
 // let currentUser = firebase.auth().currentUser;
@@ -25,6 +26,7 @@ if (currentAdmin) {
 }
 if (!currentUser) {
   location.href = "index.html";
+  console.log("not logged in from auth");
 }
 
 // current =
@@ -98,6 +100,7 @@ if (!currentUser) {
 
 function logout() {
   //  e.preventDefault();
+  // clearCookie();
   auth.signOut().then(() => {
     console.log("user is logged out");
     location.href = "index.html";

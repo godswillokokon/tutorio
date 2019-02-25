@@ -12,6 +12,17 @@ signupForm.addEventListener("submit", e => {
   auth
     .createUserWithEmailAndPassword(email, password)
     .then(cred => {
+      firebase
+        .auth()
+        .currentUser.getIdToken(true)
+        .then(function(idToken) {
+          // Send token to your backend via HTTPS
+          console.log(idToken);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
       let currentUser = sessionStorage.setItem(
         "email",
         firebase.auth().currentUser.email
