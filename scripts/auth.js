@@ -9,38 +9,40 @@
 //     console.log(result);
 //   });
 // });
-let currentUser = firebase.auth().currentUser;
+let currentUser = sessionStorage.getItem("email");
+console.log(currentUser);
+// let currentUser = firebase.auth().currentUser;
+// console.log(currentUser, "currentuser");
 let currentAdmin = currentUser.admin;
 // console.log("outside", cookie);
 // LISTEN for auth status changes
 // auth.onAuthStateChanged(user => {
-  // console.log(user.email);
-  // console.log(session);
-  
-   if (currentAdmin){
-    location.href='instructor-dashboard.html';
-  }
-  if (!currentUser) {
-     location.href='index.html';
+// console.log(user.email);
+// console.log(session);
 
-  } 
-  
-    // current = 
-    // console.log("i am a user - outside");
-    // // console.log(user.email);
-    // console.log(current.email)
-    // session = firebase
-    //   .auth()
-    //   .setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-    //   .then(function() {
-    //     // console.log(session);
-    //   });
-    //get data
-  // } else {
-  //   //
-    
-  //   console.log("i am not a user");
-  // }
+if (currentAdmin) {
+  location.href = "instructor-dashboard.html";
+}
+if (!currentUser) {
+  location.href = "index.html";
+}
+
+// current =
+// console.log("i am a user - outside");
+// // console.log(user.email);
+// console.log(current.email)
+// session = firebase
+//   .auth()
+//   .setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+//   .then(function() {
+//     // console.log(session);
+//   });
+//get data
+// } else {
+//   //
+
+//   console.log("i am not a user");
+// }
 // });
 
 // //create new guide
@@ -91,16 +93,16 @@ let currentAdmin = currentUser.admin;
 // const logout = document.getElementById("logout");
 // logout.addEventListener("click", e => {
 //   alert('hi');
-  
+
 // });
 
-function logout(){
-//  e.preventDefault();
+function logout() {
+  //  e.preventDefault();
   auth.signOut().then(() => {
     console.log("user is logged out");
-    location.href='index.html';
+    location.href = "index.html";
   });
-  console.log('am logging out');
+  console.log("am logging out");
 }
 
 //login
@@ -119,6 +121,5 @@ function logout(){
 //           console.log(cred.user);
 //         });
 //       });
-      
+
 //   });
-  
