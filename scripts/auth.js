@@ -103,6 +103,7 @@ function logout() {
   // clearCookie();
   auth.signOut().then(() => {
     console.log("user is logged out");
+    let currentUser = sessionStorage.removeItem("email");
     location.href = "index.html";
   });
   console.log("am logging out");

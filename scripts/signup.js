@@ -1,3 +1,10 @@
+auth.onAuthStateChanged(user => {
+  if (user) {
+    console.log("user logged in");
+  } else {
+    console.log("user not logged in");
+  }
+});
 // signup
 const signupForm = document.querySelector("#signup-form");
 signupForm.addEventListener("submit", e => {
