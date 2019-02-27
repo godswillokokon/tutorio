@@ -17,13 +17,23 @@ loginForm.addEventListener("submit", e => {
   auth
     .signInWithEmailAndPassword(email, password)
     .then(cred => {
-      let currentUser = sessionStorage.setItem(
-        "user",
-        firebase.auth().currentUser
-      );
-      console.log(cred, "cred");
-      console.log(currentUser, "currentuser");
+      firebase
+        .auth()
+        .currentUser.getIdToken(true)
+        .then(function(idToken) {
+          // Send token to your backend via HTTPS
+          console.log(idToken);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
 
+      let currentUser = sessionStorage.setItem(
+        "email",
+        firebase.auth().currentUser.email
+      );
+      console.log(currentUser);
+      console.log(cred.user);
       location.href = "student-dashboard.html";
     })
     .catch(err => {
@@ -31,13 +41,13 @@ loginForm.addEventListener("submit", e => {
     });
 });
 
-// function logout() {
-//   //  e.preventDefault();
-//   // clearCookie();
-//   auth.signOut().then(() => {
-//     console.log("user is logged out");
-//     let currentUser = sessionStorage.removeItem("email");
-//     // location.href = "index.html";
-//   });
-//   console.log("am logging out");
-// }
+function logout() {
+  //  e.preventDefault();
+  // clearCookie();
+  auth.signOut().then(() => {
+    console.log("user is logged out");
+    let currentUser = sessionStorage.removeItem("email");
+    // location.href = "index.html";
+  });
+  console.log("am logging out");
+}

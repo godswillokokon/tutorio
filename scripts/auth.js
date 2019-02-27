@@ -1,3 +1,11 @@
+auth.onAuthStateChanged(user => {
+  if (user) {
+    console.log("user logged in");
+  } else {
+    // location.href = "index.html";
+    console.log("user not logged in");
+  }
+});
 // // add admin cloud function
 // const adminForm = document.querySelector(".admin-actions");
 // adminForm.addEventListener("submit", e => {
@@ -11,7 +19,7 @@
 // });
 
 let currentUser = sessionStorage.getItem("email");
-console.log(currentUser);
+// console.log(currentUser);
 // let currentUser = firebase.auth().currentUser;
 // console.log(currentUser, "currentuser");
 let currentAdmin = currentUser.admin;
@@ -20,14 +28,14 @@ let currentAdmin = currentUser.admin;
 // auth.onAuthStateChanged(user => {
 // console.log(user.email);
 // console.log(session);
-
-if (currentAdmin) {
-  location.href = "instructor-dashboard.html";
-}
 if (!currentUser) {
   location.href = "index.html";
   console.log("not logged in from auth");
 }
+// if (currentAdmin) {
+//   location.href = "instructor-dashboard.html";
+// }
+
 
 // current =
 // console.log("i am a user - outside");
