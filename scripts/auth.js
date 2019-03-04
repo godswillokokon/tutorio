@@ -1,8 +1,8 @@
-const accountDetails = document.querySelector(".account-details");
-const adminItems = document.querySelectorAll(".admin");
+const accountDetails = document.querySelector("#regNum");
+// const adminItems = document.querySelectorAll(".admin");
 
-const setupUI = user => {
-  if (user) {
+const setupUI = currentUser => {
+  if (currentUser) {
     // // account info
     // db.collection("users")
     //   .doc(user.uid)
@@ -19,14 +19,14 @@ const setupUI = user => {
   }
 };
 
-auth.onAuthStateChanged(user => {
-  if (!user) {
-    location.href = "index.html";
-    console.log("user not logged in");
-  } else {
-    console.log("user logged in");
-  }
-});
+// auth.onAuthStateChanged(user => {
+//   if (!user) {
+//     location.href = "index.html";
+//     console.log("user not logged in");
+//   } else {
+//     console.log("user logged in");
+//   }
+// });
 // // add admin cloud function
 // const adminForm = document.querySelector(".admin-actions");
 // adminForm.addEventListener("submit", e => {

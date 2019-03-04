@@ -1,7 +1,7 @@
-auth.onAuthStateChanged(user => {
-  let currentUser = firebase.auth().currentUser.admin;
-  console.log(currentUser);
-});
+// auth.onAuthStateChanged(user => {
+//   let currentUser = firebase.auth().currentUser.admin;
+//   console.log(currentUser);
+// });
 // let currentUser = firebase.auth().currentUser;
 // add admin cloud function
 const adminForm = document.querySelector("#admin-actions");
@@ -52,7 +52,7 @@ auth.onAuthStateChanged(user => {
     //     setupGuides(snapshot.docs);
     //   },
   } else {
-    location.href = "index.html";
+    // location.href = "index.html";
     err => console.log(err.message);
   }
 });
