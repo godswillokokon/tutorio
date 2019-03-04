@@ -22,18 +22,20 @@ loginForm.addEventListener("submit", e => {
         .currentUser.getIdToken(true)
         .then(function(idToken) {
           // Send token to your backend via HTTPS
-          console.log(idToken);
+          let currentUsers = firebase.auth().currentUser;
+          console.log(currentUsers, "user");
+
+          console.log(idToken, "token");
+          console.log(currentUser, "session");
         })
         .catch(function(error) {
           console.log(error);
         });
-
       let currentUser = sessionStorage.setItem(
         "email",
         firebase.auth().currentUser.email
       );
-      console.log(currentUser);
-      console.log(cred.user);
+      // console.log(cred.user);
       location.href = "student-dashboard.html";
     })
     .catch(err => {
@@ -45,9 +47,9 @@ function logout() {
   //  e.preventDefault();
   // clearCookie();
   auth.signOut().then(() => {
-    console.log("user is logged out");
     let currentUser = sessionStorage.removeItem("email");
+    console.log("user is logging out");
     // location.href = "index.html";
   });
-  console.log("am logging out");
+  // console.log("am logging out");
 }

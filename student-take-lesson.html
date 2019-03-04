@@ -280,15 +280,13 @@
                     </nav>
                     <div class="js-player embed-responsive embed-responsive-16by9 mb-32pt">
                         <div class="player embed-responsive-item">
-                            <div class="player__content">
-                                <div class="player__image" style="--player-image: url(assets/images/illustration/player.svg)"></div>
-                                <a href="#" class="player__play">
-                                    <span class="material-icons">play_arrow</span>
-                                </a>
-                            </div>
+                            <!-- <div class="player__content"> -->
+                                <video class="embed-responsive-item"
+                                    src="https://res.cloudinary.com/ogcodes/video/upload/v1551189317/20180502_201131151472.mp4" controls>
+                                </video>
+                            <!-- </div> -->
                             <div class="player__embed d-none">
-                                <iframe class="embed-responsive-item"
-                                    src="https://res.cloudinary.com/ogcodes/video/upload/v1551189317/20180502_201131151472.mp4" ></iframe>
+                                
                             </div>
                         </div>
                     </div>
@@ -392,7 +390,28 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-functions.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC-1WdIpSC7e79uQgq1pzKFArp3y_ykyD4",
+            authDomain: "mini-udemy.firebaseapp.com",
+            databaseURL: "https://mini-udemy.firebaseio.com",
+            projectId: "mini-udemy",
+            storageBucket: "mini-udemy.appspot.com",
+            messagingSenderId: "658193953356"
+        };
+        firebase.initializeApp(config);
+        // make auth and firestore refrences
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const functions = firebase.functions();
 
+    </script>
+    <script src="scripts/auth.js"></script>
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
 

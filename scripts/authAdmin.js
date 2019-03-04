@@ -1,12 +1,12 @@
-let currentUser = firebase.auth().currentUser;
-let currentAdmin = currentUser.admin;
-
-  
-if (currentUser && !currentAdmin){
-    location.href='index.html';
-}
-
-if (!currentUser) {
-     location.href='index.html';
-} 
-  
+// // listen for auth status changes
+// auth.onAuthStateChanged(user => {
+//   if (user) {
+//     user.getIdTokenResult().then(idTokenResult => {
+//       user.admin = idTokenResult.claims.admin;
+//       console.log("admin logged in");
+//     });
+//   } else {
+//     err => console.log(err.message);
+//     console.log("admin not logged in");
+//   }
+// });

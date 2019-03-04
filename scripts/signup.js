@@ -1,5 +1,10 @@
 auth.onAuthStateChanged(user => {
   if (user) {
+    let currentUser = firebase.auth().currentUser.email;
+    let currentUserSession = sessionStorage.setItem("email", currentUser);
+
+    console.log(currentUserSession);
+
     console.log("user logged in");
   } else {
     console.log("user not logged in");
@@ -23,24 +28,44 @@ signupForm.addEventListener("submit", e => {
         .auth()
         .currentUser.getIdToken(true)
         .then(function(idToken) {
-          // Send token to your backend via HTTPS
           console.log(idToken);
+          // Send token to your backend via HTTPS
+          setupUI(cred);
+          const RegNum = document.querySelector("#signup-regnum");
+          return db
+            .collection("users")
+            .doc(cred.user.uid)
+            .set({
+              regNum: RegNum.value
+            });
         })
         .catch(function(error) {
           console.log(error);
         });
 
-      let currentUser = sessionStorage.setItem(
-        "email",
-        firebase.auth().currentUser.email
-      );
-      console.log(currentUser);
       console.log(cred.user);
-      location.href = "student-dashboard.html";
+      // location.href = "student-dashboard.html";
     })
     .catch(err => {
       console.log(err);
     });
 });
-// let currentUser = firebase.auth().currentUser;
-// console.log(user.user);
+// function _updateUser() {
+//   const RegNum = document.querySelector("#signup-regnum");
+
+//   var userNow = firebase.auth().currentUser;
+//   userNow
+//     .updateProfile({
+//       displayName: RegNum
+//     })
+//     .then(
+//       function() {
+//         var displayName = userNow.displayName;
+
+//         console.log(displayName);
+//       },
+//       function(error) {
+//         console.log(error);
+//       }
+//     );
+// }
