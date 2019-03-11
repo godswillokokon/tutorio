@@ -32,9 +32,14 @@ loginForm.addEventListener("submit", e => {
           console.log(error);
         });
       let currentUser = sessionStorage.setItem(
-        "email",
-        firebase.auth().currentUser.email
+        "user",
+        firebase.auth().currentUser
       );
+      const RegNum = document.querySelector("#login-regnum");
+
+          let regNum = RegNum.value;
+          console.log(regNum);
+          let regNumSession = sessionStorage.setItem("regnum", regNum);
       // console.log(cred.user);
       location.href = "student-dashboard.html";
     })
@@ -47,7 +52,7 @@ function logout() {
   //  e.preventDefault();
   // clearCookie();
   auth.signOut().then(() => {
-    let currentUser = sessionStorage.removeItem("email");
+    let currentUser = sessionStorage.removeItem("user");
     console.log("user is logging out");
     // location.href = "index.html";
   });

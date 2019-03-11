@@ -1,8 +1,15 @@
 // const guideList = document.querySelector(".guides");
 // const loggedOutLinks = document.querySelectorAll(".logged-out");
 // const loggedInLinks = document.querySelectorAll(".logged-in");
-// const accountDetails = document.querySelector(".account-details");
+const accountDetails = document.querySelector(".account-details");
+let regnum = sessionStorage.getItem("regnum");
 
+// console.log(regnum);
+const html = `
+        <h2>Logged in as ${regNum}</h2>
+        
+      `;
+accountDetails.innerHTML = html;
 // const setupUI = user => {
 //   if (user) {
 //     //acount info

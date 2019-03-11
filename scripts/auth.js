@@ -1,23 +1,5 @@
-const accountDetails = document.querySelector("#regNum");
-// const adminItems = document.querySelectorAll(".admin");
 
-const setupUI = currentUser => {
-  if (currentUser) {
-    // // account info
-    // db.collection("users")
-    //   .doc(user.uid)
-    //   .get()
-    //   .then(doc => {
-    //     const html = `
-    //     <div>Logged in as ${user.email}</div>
-    //     <div>${doc.data().bio}</div>
-    //     <div class="pink-text">${user.admin ? "Admin" : ""}</div>
-    //   `;
-    //     accountDetails.innerHTML = html;
-    //   });
-    alert("hi");
-  }
-};
+// const adminItems = document.querySelectorAll(".admin");
 
 // auth.onAuthStateChanged(user => {
 //   if (!user) {
@@ -39,11 +21,14 @@ const setupUI = currentUser => {
 //   });
 // });
 
-let currentUser = sessionStorage.getItem("email");
+let currentUser = sessionStorage.getItem("user");
 // console.log(currentUser);
 
 // console.log(currentUser, "currentuser");
 let currentAdmin = currentUser.admin;
+let regNum = sessionStorage.getItem("regnum");
+
+
 // console.log("outside", cookie);
 // LISTEN for auth status changes
 // auth.onAuthStateChanged(user => {
@@ -53,10 +38,22 @@ if (!currentUser) {
   location.href = "index.html";
   console.log("not logged in from auth");
 } else {
-  let user = firebase.auth().currentUser;
-  console.log(user);
+  
   console.log("user logged in from auth");
 }
+
+// if (currentUser) {
+//   // account info
+
+//       const html = `
+//         <div>Logged in as ${user.regNum}</div>
+        
+//         <div class="pink-text">${user.admin ? "Admin" : ""}</div>
+//       `;
+//       accountDetails.innerHTML = html;
+    
+//   alert("hi");
+// }
 // if (currentAdmin) {
 //   location.href = "instructor-dashboard.html";
 // }
@@ -155,7 +152,7 @@ function logout() {
   // clearCookie();
   auth.signOut().then(() => {
     console.log("user is logged out");
-    let currentUser = sessionStorage.removeItem("email");
+    let currentUser = sessionStorage.removeItem("user");
     location.href = "index.html";
   });
   console.log("am logging out");

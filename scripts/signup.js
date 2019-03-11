@@ -1,7 +1,7 @@
 auth.onAuthStateChanged(user => {
   if (user) {
     let currentUser = firebase.auth().currentUser.email;
-    let currentUserSession = sessionStorage.setItem("email", currentUser);
+    let currentUserSession = sessionStorage.setItem("user", currentUser);
 
     console.log(currentUserSession);
 
@@ -28,13 +28,18 @@ signupForm.addEventListener("submit", e => {
         .auth()
         .currentUser.getIdToken(true)
         .then(function(idToken) {
-          console.log(idToken);
+          // console.log(idToken);
           // Send token to your backend via HTTPS
-          setupUI(cred);
+          // setupUI(cred);
           const RegNum = document.querySelector("#signup-regnum");
+
+          let regNum = RegNum.value;
+          console.log(regNum);
+          let regNumSession = sessionStorage.setItem("regnum", regNum);
+
           return db
             .collection("users")
-            .doc(cred.user.uid)
+            .doc(cred.user.email)
             .set({
               regNum: RegNum.value
             });
@@ -44,7 +49,7 @@ signupForm.addEventListener("submit", e => {
         });
 
       console.log(cred.user);
-      // location.href = "student-dashboard.html";
+      location.href = "student-dashboard.html";
     })
     .catch(err => {
       console.log(err);

@@ -1,13 +1,61 @@
-// auth.onAuthStateChanged(user => {
-//   let currentUser = firebase.auth().currentUser.admin;
-//   console.log(currentUser);
-// });
-// let currentUser = firebase.auth().currentUser;
-// add admin cloud function
+auth.onAuthStateChanged(user => {
+  if (user) {
+    console.log("user logged in");
+  } else {
+    console.log("user not logged in");
+  }
+});
+//login
+const loginForm = document.querySelector("#login-form");
+loginForm.addEventListener("submit", e => {
+  e.preventDefault();
+  //get user info
+  const email = loginForm["login-email"].value;
+  const password = loginForm["login-password"].value;
+  // const displayName = signupForm["login-name"].value;
+
+  auth
+    .signInWithEmailAndPassword(email, password)
+    .then(cred => {
+      firebase
+        .auth()
+        .currentUser.getIdToken(true)
+        .then(function(idToken) {
+          // Send token to your backend via HTTPS
+          let currentUsers = firebase.auth().currentUser;
+          console.log(currentUsers, "user");
+
+          console.log(idToken, "token");
+          console.log(currentUser, "session");
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+      let currentUser = sessionStorage.setItem(
+        "user",
+        firebase.auth().currentUser
+      );
+      // console.log(cred.user);
+      // location.href = "student-dashboard.html";
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+function logout() {
+  //  e.preventDefault();
+  // clearCookie();
+  auth.signOut().then(() => {
+    let currentUser = sessionStorage.removeItem("user");
+    console.log("user is logging out");
+    // location.href = "index.html";
+  });
+  // console.log("am logging out");
+}
+
 const adminForm = document.querySelector("#admin-actions");
 adminForm.addEventListener("submit", e => {
-  e.preventDefault();
-
   const adminEmail = document.querySelector("#admin-email").value;
   const addAdminRole = functions.httpsCallable("addAdminRole");
   addAdminRole({ email: adminEmail })
@@ -15,6 +63,7 @@ adminForm.addEventListener("submit", e => {
       console.log(result);
 
       location.href = "instructor-dashboard.html";
+      console.log("admin added");
     })
     .catch(err => {
       console.log(err);
@@ -41,7 +90,7 @@ auth.onAuthStateChanged(user => {
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    console.log("hi");
+    console.log(user.admin);
 
     // user.getIdTokenResult().then(idTokenResult => {
     //   user.admin = idTokenResult.claims.admin;
@@ -51,8 +100,9 @@ auth.onAuthStateChanged(user => {
     //   snapshot => {
     //     setupGuides(snapshot.docs);
     //   },
+    console.log("admin added")
   } else {
-    // location.href = "index.html";
+    location.href = "index.html";
     err => console.log(err.message);
   }
 });
