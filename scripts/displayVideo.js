@@ -1,53 +1,7 @@
-// var cld = cloudinary.Cloudinary.new({ cloud_name: "ogcodes" });
-// cloudinary.config({
-//   cloud_name: "ogcodes",
-//   api_key: "334988893317523",
-//   api_secret: "i2aIgxj33Bk3hJRIzCfHcx26N-s"
-// });
-
-// function upload() {
-//   cloudinary.v2.uploader.upload(
-//     "videoFirst.mp4",
-//     {
-//       resource_type: "video",
-//       public_id: "heyMyPublicId",
-//       overwrite: true
-//     },
-//     function(error, result) {
-//       console.log(result, error);
-//     }
-//   );
-
-//   // notification_url: "https://mysite.example.com/notify_endpoint"
-// }
-// var demoplayer = cld
-//   .videoPlayer("doc-player", {
-//     fontFace: "Yatra One",
-//     playlistWidget: {
-//       direction: "vertical",
-//       total: 5
-//     }
-//   })
-//   .width(600);
-
-// demoplayer.playlistByTag("video_race", {
-//   sourceParams: {
-//     overlay: "cloudinary_icon",
-//     opacity: 80,
-//     effect: "brightness:200",
-//     width: 100,
-//     gravity: "north_east",
-//     x: 20,
-//     y: 10
-//   },
-//   autoAdvance: 0,
-//   repeat: true,
-//   presentUpcoming: 5
-// });
-var cld = cloudinary.Cloudinary.new({ cloud_name: "miki-cloudinary" });
+var cld = cloudinary.Cloudinary.new({ cloud_name: "ogcodes" });
 
 // Initialize player
-var player = cld.videoPlayer("example-player");
+var player = cld.videoPlayer("img-preview");
 
 // Pass a sorter to sort list in alphabetical order by publicId
 var sorter = function(a, b) {
@@ -60,11 +14,12 @@ var sorter = function(a, b) {
 // the function returns a Promise when the operation completes.
 // The return value is 'player'.
 player
-  .playlistByTag("demo", {
+  .playlistByTag("Javascript Basics", {
     sorter: sorter,
     sourceParams: { angle: 13 },
-    autoAdvance: 0,
-    repeat: true
+    autoAdvance: false,
+    repeat: true,
+    presentUpcoming: false
   })
   .then(function(player) {
     var divElem = document.querySelector("div#playlist-data");

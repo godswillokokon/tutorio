@@ -73,7 +73,7 @@
                     <nav class="nav navbar-nav ml-auto flex-nowrap">
                         <div class="nav-item dropdown d-none d-sm-flex ml-16pt">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                                <img width="32" height="32" class="rounded-circle" src="assets/images/people/50/guy-3.jpg" alt="student" />
+                                <img width="32" height="32" class="rounded-circle" src="assets/images/illustration/teacher/128/white.svg" alt="tutor" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
 
@@ -81,7 +81,7 @@
                                 <div class="dropdown-header"><strong>Instructor</strong></div>
                                 <a class="dropdown-item" href="instructor-dashboard.html">Dashboard</a>
                                 <a class="dropdown-item" href="instructor-courses.html">Courses</a>
-                                <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a>
+                                <!-- <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a> -->
                                 <div class="dropdown-divider"></div>
                                 <div class="dropdown-header"><strong>Account</strong></div>
                                 <!-- <a class="dropdown-item" href="student-edit-account.html">Edit Account</a> -->
@@ -135,14 +135,9 @@
                                 <li class="nav-item active">
                                     <a href="instructor-dashboard.html" class="nav-link">Dashboard</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="instructor-courses.html">Courses</a>
-                                        <!-- <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a> -->
-                                        <a class="dropdown-item" href="instructor-edit-course.html">Edit Course</a>
-                                        <!-- <a class="dropdown-item" href="instructor-edit-quiz.html">Edit Quiz</a> -->
-                                    </div>
+                                <li class="nav-item ">
+                                    <a href="instructor-courses.html" class="nav-link" >Courses</a>
+                                    
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reports</a>
@@ -211,132 +206,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-8pt">
-                    <div class="col-lg-12">
-
-                        <div class="mb-heading d-flex align-items-end">
-                            <div class="flex">
-                                <h4 class="card-title">Transactions</h4>
-                                <p class="card-subtitle">Latest Transactions</p>
-                            </div>
-                            <!-- <a href="instructor-statement.html" class="text-underline">Statement</a> -->
-                        </div>
-                        <div class="card">
-                            <div data-toggle="lists" data-lists-values='[
-            "js-lists-values-course", 
-            "js-lists-values-document",
-            "js-lists-values-amount",
-            "js-lists-values-date"
-          ]' data-lists-sort-by="js-lists-values-date" data-lists-sort-desc="true" class="table-responsive">
-                                <table class="table table-flush table-nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">
-                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-course">Course</a>
-                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-document">Document</a>
-                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-amount">Amount</a>
-                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-date">Date</a>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="list">
-
-
-
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-nowrap align-items-center">
-                                                    <a href="instructor-edit-course.html" class="avatar avatar-4by3 avatar-sm mr-3">
-                                                        <img src="assets/images/paths/angular_routing_200x168.png" alt="course" class="avatar-img rounded">
-                                                    </a>
-                                                    <div class="flex">
-                                                        <a class="text-body js-lists-values-course" href="instructor-edit-course.html"><strong>Angular Routing In-Depth</strong></a><br>
-                                                        <small class="text-muted mr-1">
-                                                            Invoice
-                                                            <a href="invoice.html" style="color: inherit;" class="js-lists-values-document">#8734</a> -
-                                                            &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <small class="text-muted text-uppercase js-lists-values-date">12 Nov 2018</small>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-nowrap align-items-center">
-                                                    <a href="instructor-edit-course.html" class="avatar avatar-4by3 avatar-sm mr-3">
-                                                        <img src="assets/images/paths/angular_testing_200x168.png" alt="course" class="avatar-img rounded">
-                                                    </a>
-                                                    <div class="flex">
-                                                        <a class="text-body js-lists-values-course" href="instructor-edit-course.html"><strong>Angular Unit Testing</strong></a><br>
-                                                        <small class="text-muted mr-1">
-                                                            Invoice
-                                                            <a href="invoice.html" style="color: inherit;" class="js-lists-values-document">#8735</a> -
-                                                            &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <small class="text-muted text-uppercase js-lists-values-date">13 Nov 2018</small>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-nowrap align-items-center">
-                                                    <a href="instructor-edit-course.html" class="avatar avatar-4by3 avatar-sm mr-3">
-                                                        <img src="assets/images/paths/typescript_200x168.png" alt="course" class="avatar-img rounded">
-                                                    </a>
-                                                    <div class="flex">
-                                                        <a class="text-body js-lists-values-course" href="instructor-edit-course.html"><strong>Introduction to TypeScript</strong></a><br>
-                                                        <small class="text-muted mr-1">
-                                                            Invoice
-                                                            <a href="invoice.html" style="color: inherit;" class="js-lists-values-document">#8736</a> -
-                                                            &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <small class="text-muted text-uppercase js-lists-values-date">14 Nov 2018</small>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-nowrap align-items-center">
-                                                    <a href="instructor-edit-course.html" class="avatar avatar-4by3 avatar-sm mr-3">
-                                                        <img src="assets/images/paths/angular_200x168.png" alt="course" class="avatar-img rounded">
-                                                    </a>
-                                                    <div class="flex">
-                                                        <a class="text-body js-lists-values-course" href="instructor-edit-course.html"><strong>Learn Angular Fundamentals</strong></a><br>
-                                                        <small class="text-muted mr-1">
-                                                            Invoice
-                                                            <a href="invoice.html" style="color: inherit;" class="js-lists-values-document">#8737</a> -
-                                                            &dollar;<span class="js-lists-values-amount">89</span> USD
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <small class="text-muted text-uppercase js-lists-values-date">15 Nov 2018</small>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                    </div>
-                    
-
-                </div>
+                
                 </div>
                    <div class="js-fix-footer bg-white border-top-2">
                 <div class="container page-section py-lg-48pt">

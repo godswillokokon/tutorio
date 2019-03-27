@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.css" rel="stylesheet">
     <title>Student Take Lesson</title>
 
     <!-- Prevent the demo from appearing in search engines -->
@@ -34,6 +35,9 @@
     <link type="text/css" href="assets/css/app.css" rel="stylesheet">
     <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
 
+<!-- cloudinary -->
+
+    <link href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.css" rel="stylesheet">
 
 
 
@@ -70,13 +74,7 @@
                         <span class="d-none d-md-block">Tutorio</span>
                     </a>
 
-                    <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button>
-
-                    <form class="search-form search-form--black search-form-courses d-none d-md-flex" action="http://tutorio-bootstrap.frontendmatter.com/library-filters.html">
-                        <input type="text" class="form-control" placeholder="What would you like to learn?">
-                        <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
-                    </form>
-
+                   
                     <!-- Main Navigation -->
 
 
@@ -107,116 +105,7 @@
 
 
                         <!-- Notifications dropdown -->
-                        <li class="nav-item dropdown dropdown-notifications dropdown-menu-sm-full">
-                            <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
-                                <i class="material-icons">notifications</i>
-                                <span class="badge badge-notifications badge-danger">2</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div data-perfect-scrollbar class="position-relative">
-                                    <div class="dropdown-header"><strong>Messages</strong></div>
-                                    <div class="list-group list-group-flush mb-0">
-
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">5 minutes ago</small>
-
-                                                <span class="ml-auto unread-indicator bg-accent"></span>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-                                                    <strong>Michelle</strong>
-                                                    <span class="text-black-70">Clients loved the new design.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">5 minutes ago</small>
-
-                                                <span class="ml-auto unread-indicator bg-accent"></span>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-                                                    <strong>Michelle</strong>
-                                                    <span class="text-black-70">🔥 Superb job..</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                    </div>
-
-                                    <div class="dropdown-header"><strong>System notifications</strong></div>
-                                    <div class="list-group list-group-flush mb-0">
-
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action border-left-3 border-left-danger">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">3 minutes ago</small>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-danger">account_circle</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-
-                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">5 hours ago</small>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-success">group_add</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-                                                    <strong>Adrian. D</strong>
-                                                    <span class="text-black-70">Wants to join your private group.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">1 day ago</small>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-
-                                                    <span class="text-black-70">Your deploy was successful.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- // END Notifications dropdown -->
+                        
                     </nav>
 
                     <!-- // END Main Navigation -->
@@ -230,14 +119,6 @@
 
         <!-- Header Layout Content -->
         <div class="mdk-header-layout__content page-content ">
-
-
-
-
-
-
-
-
 
 
 
@@ -281,9 +162,21 @@
                     <div class="js-player embed-responsive embed-responsive-16by9 mb-32pt">
                         <div class="player embed-responsive-item">
                             <!-- <div class="player__content"> -->
-                                <video class="embed-responsive-item"
-                                    src="https://res.cloudinary.com/ogcodes/video/upload/v1551189317/20180502_201131151472.mp4" controls>
-                                </video>
+                            <video id="example-player" controls muted autoplay class="cld-video-player cld-video-player-skin-dark"
+                                data-cld-transformation='{ "width": 500, "crop": "limit" }' >
+                            </video>
+                            
+                            <button id="play-prev" class="btn btn-default">Prev</button>
+                            <button id="play-next" class="btn btn-default">Next</button>
+                            
+                            <div id="source-data">
+                                <span id="public-id-placeholder"></span><br>
+                                <span id="source-url-placeholder"></span>
+                            </div>
+                            
+                            <div class="well" id="playlist-data">
+                            </div>
+
                             <!-- </div> -->
                             <div class="player__embed d-none">
                                 
@@ -445,6 +338,10 @@
 
 
 <script src="https://widget.cloudinary.com/global/all.js"></script>
+<!-- Cloudinary Video Player Dependencies -->
+
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.js"></script>
 
 </body>
 

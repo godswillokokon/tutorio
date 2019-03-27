@@ -1,7 +1,8 @@
 auth.onAuthStateChanged(user => {
   if (user) {
     let currentUser = firebase.auth().currentUser.email;
-    let currentUserSession = sessionStorage.setItem("user", currentUser);
+    sessionStorage.setItem("user", currentUser);
+    let currentUserSession = sessionStorage.getItem("user");
 
     console.log(currentUserSession);
 
@@ -31,12 +32,7 @@ signupForm.addEventListener("submit", e => {
           // console.log(idToken);
           // Send token to your backend via HTTPS
           // setupUI(cred);
-          const RegNum = document.querySelector("#signup-regnum");
-
-          let regNum = RegNum.value;
-          console.log(regNum);
-          let regNumSession = sessionStorage.setItem("regnum", regNum);
-
+          
           return db
             .collection("users")
             .doc(cred.user.email)
@@ -49,12 +45,31 @@ signupForm.addEventListener("submit", e => {
         });
 
       console.log(cred.user);
+      const RegNum = document.querySelector("#signup-regnum");
+
+          let regNum = RegNum.value;
+          console.log(regNum);
+          
+          let regNumSession = sessionStorage.setItem("regnum", regNum);
       location.href = "student-dashboard.html";
     })
     .catch(err => {
       console.log(err);
     });
 });
+
+function logout() {
+  //  e.preventDefault();
+  // clearCookie();
+  auth.signOut().then(() => {
+    console.log("user is logged out");
+    let currentUser = sessionStorage.removeItem("user");
+    let regNumSession = sessionStorage.removeItem("regnum");
+    // location.href = "index.html";
+  });
+  console.log("am logging out");
+}
+
 // function _updateUser() {
 //   const RegNum = document.querySelector("#signup-regnum");
 

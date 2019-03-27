@@ -39,6 +39,7 @@ function logout() {
   auth.signOut().then(() => {
     console.log("user is logged out");
     let currentUser = sessionStorage.removeItem("admin");
+    let usernameSession = sessionStorage.removeItem("adminUsername");
     location.href = "loginAdmin.html";
   });
   console.log("am logging out");

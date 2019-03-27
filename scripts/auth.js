@@ -25,7 +25,7 @@ let currentUser = sessionStorage.getItem("user");
 // console.log(currentUser);
 
 // console.log(currentUser, "currentuser");
-let currentAdmin = currentUser.admin;
+// let currentAdmin = currentUser.admin;
 let regNum = sessionStorage.getItem("regnum");
 
 
@@ -38,7 +38,9 @@ if (!currentUser) {
   location.href = "index.html";
   console.log("not logged in from auth");
 } else {
-  
+  let currentUserSession = sessionStorage.getItem("user");
+
+    console.log(currentUserSession);
   console.log("user logged in from auth");
 }
 
@@ -153,6 +155,7 @@ function logout() {
   auth.signOut().then(() => {
     console.log("user is logged out");
     let currentUser = sessionStorage.removeItem("user");
+    let regNumSession = sessionStorage.removeItem("regnum");
     location.href = "index.html";
   });
   console.log("am logging out");
