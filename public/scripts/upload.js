@@ -1,8 +1,8 @@
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/ogcodes/upload";
 const CLOUDINARY_UPLOAD_PRESET = "i4hpnx9j";
 const CLOUD_NAME = "ogcodes";
-let mm = firebase.firestore();
-console.log(mm);
+// let mm = firebase.firestore();
+// console.log(mm);
 let imgPreview = document.getElementById("img-preview");
 let fileUpload = document.getElementById("file-upload");
 
@@ -27,7 +27,7 @@ fileUpload.addEventListener("change", event => {
       imgPreview.src = res.data.secure_url;
       res.data.tags = courseTitle;
       console.log(courseTitle);
-      return mm
+      return db
         .collection("class")
         .set({
           lesson: imgPreview.src
