@@ -59,9 +59,16 @@
 //   .addEventListener("click", function() {
 //     player.playNext();
 //   });
+
 let docplayer = document.getElementById("preview");
-var cld = cloudinary.Cloudinary.new({ cloud_name: "ogcodes" });
-var demoplayer = cld
+
+let title = document.getElementById("title");
+let intro = document.getElementById("intro");
+let description = document.getElementById("description");
+let timeframe = document.getElementById("timeframe");
+
+let cld = cloudinary.Cloudinary.new({ cloud_name: "ogcodes" });
+let demoplayer = cld
   .videoPlayer("docplayer", {
     fontFace: "Yatra One",
     playlistWidget: {
@@ -70,18 +77,28 @@ var demoplayer = cld
     }
   })
   .width(600);
-
-demoplayer.playlistByTag("Javascript", {
-  sourceParams: {
-    overlay: "cloudinary_icon",
-    opacity: 80,
-    effect: "brightness:200",
-    width: 100,
-    gravity: "north_east",
-    x: 20,
-    y: 10
-  },
-  autoAdvance: 0,
-  repeat: true,
-  presentUpcoming: 5
-});
+db.collection("class")
+  .doc()
+  .get()
+  .then(doc => {
+    lesson = doc.data().lesson;
+    docplayer.src = lesson;
+    courseTitle = doc.data().courseTitle;
+    courseDescription = doc.data().courseDescription;
+    date = doc.data().date;
+    duration = doc.data().duration;
+    duration = doc.data().username;
+    console.log("lesson : ", lesson);
+    console.log("Course Title : ", courseTitle);
+    console.log("Course Desscription", courseDescription);
+    console.log("date", date);
+    console.log("duration", duration);
+    console.log("Tutor Name", username);
+    const htmlTitle = `
+        <span id="title" class="card-title text-body mb-0">${courseTitle}</span>
+      `;
+    title.innerHTML = htmlTitle;
+  })
+  .catch(err => {
+    console.error(err);
+  });

@@ -10,6 +10,7 @@ const html = `
         
       `;
 accountDetails.innerHTML = html;
+
 // const setupUI = user => {
 //   if (user) {
 //     //acount info

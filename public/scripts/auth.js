@@ -1,4 +1,3 @@
-
 // const adminItems = document.querySelectorAll(".admin");
 
 // auth.onAuthStateChanged(user => {
@@ -28,7 +27,6 @@ let currentUser = sessionStorage.getItem("user");
 // let currentAdmin = currentUser.admin;
 let regNum = sessionStorage.getItem("regnum");
 
-
 // console.log("outside", cookie);
 // LISTEN for auth status changes
 // auth.onAuthStateChanged(user => {
@@ -40,7 +38,7 @@ if (!currentUser) {
 } else {
   let currentUserSession = sessionStorage.getItem("user");
 
-    console.log(currentUserSession);
+  console.log(currentUserSession);
   console.log("user logged in from auth");
 }
 
@@ -49,11 +47,11 @@ if (!currentUser) {
 
 //       const html = `
 //         <div>Logged in as ${user.regNum}</div>
-        
+
 //         <div class="pink-text">${user.admin ? "Admin" : ""}</div>
 //       `;
 //       accountDetails.innerHTML = html;
-    
+
 //   alert("hi");
 // }
 // if (currentAdmin) {

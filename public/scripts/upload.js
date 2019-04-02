@@ -1,13 +1,19 @@
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/ogcodes/upload";
 const CLOUDINARY_UPLOAD_PRESET = "i4hpnx9j";
 const CLOUD_NAME = "ogcodes";
-// let mm = firebase.firestore();
-// console.log(mm);
+
 let imgPreview = document.getElementById("img-preview");
 let fileUpload = document.getElementById("file-upload");
 
+let date;
+let duration;
+let format;
+let tag;
 let courseDescription = document.getElementById("courseDescription").value;
 let courseTitle = document.getElementById("courseTitle").value;
+
+let username = sessionStorage.getItem("adminUsername");
+
 fileUpload.addEventListener("change", event => {
   let file = event.target.files[0];
   let formData = new FormData();
@@ -25,15 +31,24 @@ fileUpload.addEventListener("change", event => {
     .then(res => {
       console.log(res);
       imgPreview.src = res.data.secure_url;
-      res.data.tags = courseTitle;
+      date = res.data.created_at;
+      duration = res.data.duration;
+      tag = res.data.tags;
       console.log(courseTitle);
+      console.log(courseDescription);
       return db
         .collection("class")
+        .doc()
         .set({
-          lesson: imgPreview.src
+          lesson: imgPreview.src,
+          courseTitle,
+          courseDescription,
+          date,
+          duration,
+          username
         })
-        .catch(function(error) {
-          console.log(error);
+        .catch(err => {
+          console.error(err);
         });
     })
     .catch(err => {
