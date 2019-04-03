@@ -12,7 +12,7 @@ let tag;
 let courseDescription = document.getElementById("courseDescription").value;
 let courseTitle = document.getElementById("courseTitle").value;
 
-let username = sessionStorage.getItem("adminUsername");
+// let username = sessionStorage.getItem("adminUsername");
 
 fileUpload.addEventListener("change", event => {
   let file = event.target.files[0];
@@ -44,8 +44,7 @@ fileUpload.addEventListener("change", event => {
           courseTitle,
           courseDescription,
           date,
-          duration,
-          username
+          duration
         })
         .catch(err => {
           console.error(err);
