@@ -137,7 +137,7 @@ db.collection("class")
     const htmlDate = `
         <li class="nav-item navbar-list__item" id="date">
           <i class="material-icons text-muted icon--left">schedule</i>
-           Date Created:  ${doc.data().date.toDateString()}
+           Date Created:  ${new Date(doc.data().date).toDateString()}
         </li>
       `;
     dateCreated.innerHTML = htmlDate;
