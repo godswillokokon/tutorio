@@ -130,10 +130,10 @@
                                     <a href="student-take-course.html"><img src="assets/images/paths/angular_64x64.png" width="40" alt="Angular" class="rounded"></a>
                                 </div>
                                 <div class="media-body">
-                                    <span id="title" class="card-title text-body mb-0">Mr. Joe Doe</span>
+                                    <span id="title" class="card-title text-body mb-0"></span>
                                     <p class="lh-1 d-flex align-items-center mb-0">
                                        
-                                        <span  id="tutorname" class="text-50 small font-weight-bold mr-8pt">Mr. Oyo Ita</span>
+                                        <span  id="tutor" class="text-50 small font-weight-bold mr-8pt"></span>
                                         <span class="text-50 small">Software Engineer and Developer</span>
                                     </p>
                                 </div>
@@ -142,7 +142,7 @@
                     </nav>
                     <ul class="navbar-list__item nav navbar-nav ml-sm-auto align-items-center align-items-sm-end">
                         <li class="nav-item active ml-sm-16pt">
-                            <a href="#" class="nav-link">Current Lesson</a>
+                            <a href="#" class="nav-link">Latest Lesson</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a href="#" class="nav-link">Next</a>
@@ -162,9 +162,9 @@
                     <div class="js-player embed-responsive embed-responsive-16by9 mb-32pt">
                         <div class="player embed-responsive-item">
                             <!-- <div class="player__content"> -->
-                        <video id="docplayer" controls muted class="cld-video-player cld-fluid"></video>
+                        <video id="docplayer" controls  class="cld-video-player cld-fluid"></video>
                             
-                            <button id="play-prev" class="btn btn-default">Prev</button>
+                            <!-- <button id="play-prev" class="btn btn-default">Prev</button>
                             <button id="play-next" class="btn btn-default">Next</button>
                             
                             <div id="source-data">
@@ -173,7 +173,7 @@
                             </div>
                             
                             <div class="well" id="playlist-data">
-                            </div>
+                            </div> -->
 
                             <!-- </div> -->
                             <div class="player__embed d-none">
@@ -183,12 +183,12 @@
                     </div>
 
                     <div class="d-flex flex-wrap align-items-end mb-16pt">
-                        <h1 id="intro" class="text-white flex m-0">Introduction to TypeScript</h1>
-                        <p id="timeframe" class="h1 text-white-50 font-weight-light m-0">50:13</p>
+                        <h1 id="intro" class="text-white flex m-0"></h1>
+
                     </div>
 
-                    <p id="description" class="hero__lead measure-hero-lead text-white-50 mb-24pt">JavaScript is now used to power backends, create hybrid mobile applications, architect cloud solutions, design neural networks and even control robots. Enter TypeScript: a superset of JavaScript for scalable, secure, performant and feature-rich applications.</p>
-
+                    <p id="description" class="hero__lead measure-hero-lead text-white-50 mb-24pt"></p>
+                    <p  id="timeframe" class="h1 text-white-50 font-weight-light m-0"></p>
                     <!-- <a href="#" class="btn btn-white">Resume lesson</a> -->
                 </div>
             </div>
@@ -201,19 +201,18 @@
                                 <span class="media-left mr-16pt">
                                     <img src="assets/images/people/50/guy-6.jpg" width="40" alt="avatar" class="rounded-circle">
                                 </span>
-                                <div class="media-body">
-                                    <a class="card-title m-0" href="instructor-profile.html">Mr. Oyo Ita</a>
+                                <div class="media-body" id="tutorsec">
+                                    <a class="card-title m-0" ></a>
                                     <p class="text-50 lh-1 mb-0">Instructor</p>
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item navbar-list__item">
-                            <i id="timeframe" class="material-icons text-muted icon--left">schedule</i>
-                            2h 46m
+                        <li id="date" class="nav-item navbar-list__item" >
+                            
                         </li>
-                        <li class="nav-item navbar-list__item">
-                            <i class="material-icons text-muted icon--left">assessment</i>
-                            Beginner
+                        <li id="level" class="nav-item navbar-list__item">
+                            <i  class="material-icons text-muted icon--left">assessment</i>
+                            
                         </li>
                         <li class="nav-item ml-sm-auto text-sm-center flex-column navbar-list__item">
                             <div class="rating rating-24">

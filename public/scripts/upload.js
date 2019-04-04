@@ -11,8 +11,10 @@ let format;
 let tag;
 let courseDescription = document.getElementById("courseDescription").value;
 let courseTitle = document.getElementById("courseTitle").value;
+let courseLevel = document.getElementById("courseLevel").value;
 
-// let username = sessionStorage.getItem("adminUsername");
+let Tutorusername = sessionStorage.getItem("adminUsername");
+console.log(Tutorusername);
 
 fileUpload.addEventListener("change", event => {
   let file = event.target.files[0];
@@ -33,6 +35,7 @@ fileUpload.addEventListener("change", event => {
       imgPreview.src = res.data.secure_url;
       date = res.data.created_at;
       duration = res.data.duration;
+      // res.data.format = "webm";
       tag = res.data.tags;
       console.log(courseTitle);
       console.log(courseDescription);
@@ -44,7 +47,9 @@ fileUpload.addEventListener("change", event => {
           courseTitle,
           courseDescription,
           date,
-          duration
+          duration,
+          courseLevel,
+          Tutorusername
         })
         .catch(err => {
           console.error(err);
