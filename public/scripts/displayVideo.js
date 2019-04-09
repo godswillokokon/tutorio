@@ -71,7 +71,7 @@ let tutor = document.getElementById("tutor");
 let tutorsec = document.getElementById("tutorsec");
 let dateCreated = document.getElementById("date");
 
-let id = "0DbbaU4Z7JjAryCQeO3K";
+let id = window.location.search.split("?")[1];
 db.collection("class")
   .doc(id)
   .get()

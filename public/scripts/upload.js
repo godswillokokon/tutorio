@@ -35,7 +35,7 @@ fileUpload.addEventListener("change", event => {
       imgPreview.src = res.data.secure_url;
       date = res.data.created_at;
       duration = res.data.duration;
-      res.data.format = "webm";
+      // res.data.format = "webm";
       tag = res.data.tags;
       console.log(courseTitle);
       console.log(courseDescription);
