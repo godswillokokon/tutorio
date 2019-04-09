@@ -34,7 +34,7 @@ const setupContent = data => {
                                                                 .Tutorusername
                                                             }</small>
                                                         </div>
-                                                        <a href="student-take-lesson.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                       
                                                     </div>
                                                     <div class="d-flex">
                                                         <div class="rating flex">
@@ -43,9 +43,9 @@ const setupContent = data => {
                                                                 .courseLevel
                                                             }
                                                         </div>
-                                                        <small class="text-50">${Math.ceil(
+                                                        <small class="text-50">Length: ${Math.ceil(
                                                           mainDuration
-                                                        )}</small>
+                                                        )} Minutes</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,14 +60,16 @@ const setupContent = data => {
   content.innerHTML = html;
 };
 
-db.collection("class").onSnapshot(
-  doc => {
-    let data = doc.docs;
-    setupContent(data);
-  },
-  err => {
-    console.log(err);
-  }
-);
+db.collection("class")
+  .orderBy("courseLevel", "asc")
+  .onSnapshot(
+    doc => {
+      let data = doc.docs;
+      setupContent(data);
+    },
+    err => {
+      console.log(err);
+    }
+  );
 // setInterval(setupContent, 2000)
 // setupContent();

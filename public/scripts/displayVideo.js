@@ -117,7 +117,7 @@ db.collection("class")
     const htmlLevel = `
         <li id="level" class="nav-item navbar-list__item">
           <i  class="material-icons text-muted icon--left">assessment</i>
-         ${doc.data().courseLevel}
+         Level : ${doc.data().courseLevel}
         </li>
       `;
     level.innerHTML = htmlLevel;

@@ -42,7 +42,7 @@
 
 </head>
 
-<body class="layout-navbar-mini-fixed-bottom">
+<body class="layout-navbar-mini-fixed-bottom" id="whole"> 
     <div class="preloader">
         <div class="sk-double-bounce">
             <div class="sk-child sk-double-bounce1"></div>
@@ -191,7 +191,7 @@
                             <h4>Course title</h4>
                              
                             <div class="form-group">
-                                <input type="text " id="courseTitle" class="form-control form-control-lg" placeholder="Course title" value="Javascript">
+                                <input type="text " id="courseTitle" class="form-control form-control-lg" placeholder="Course title" >
                             </div>
                            
                             
@@ -199,9 +199,12 @@
                             <textarea  id="courseDescription" class="form-control" rows="3" placeholder="Course description goes here.."></textarea>
                             <br>
                             <div class="form-group">
-                                <input type="text " id="courseLevel" class="form-control form-control-lg" placeholder="Course Level eg. Beginner, Advanced, etc">
+                                <input type="text " id="courseLevel" class="form-control form-control-lg" placeholder="100, 200, 300, 400">
                             </div>
                             <br>
+                            <!-- <div class="card-header text-center">
+                                <a href="#" href="instructor-edit-course.html" class="btn btn-accent">Upload Text</a>
+                            </div> -->
                             <!-- <h4>Course photo</h4>
                             
                             <div class="form-group">
@@ -227,33 +230,48 @@
                             
                             </div>
                         </div>
-                        <!-- <div class="col-md-4">
-                            <div class="card m-0">
+                        <div class="col-md-4">
+                            <!-- <div class="card m-0"> -->
+                                <div class="mb-heading d-flex align-items-center">
+                                    <h4 class="flex mb-0">Main Video</h4>
+                                    <!-- <a href="#" class="text-underline">Edit</a> -->
+                                </div>
+                                
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                
+                                        <video id="img-preview" controls 
+                                            class="cld-video-player cld-video-player-skin-light embed-responsive-item"
+                                            data-cld-transformation='{ "width": 500, "crop": "limit" }'>
+                                        </video>
+                                    </div>
+                                </div>
                                 <div class="card-header text-center">
-                                     <img src="assets/images/icon/footer/youtube-square%402x.png" id="img-preview"/>
-                                    <a href="#" class="btn btn-accent">Save changes</a>
+
+                                    
+                                    <a href="#" onclick="Next()" class="btn btn-accent">Save</a>
                                     
 
-                                </div>
-                                <div class="list-group list-group-flush">
-                                    <div class="list-group-item d-flex">
+                                <!-- </div> -->
+                                <!-- <div class="list-group list-group-flush"> -->
+                                    <!-- <div class="list-group-item d-flex">
                                         <a class="flex" href="#"><strong>Save Draft</strong></a>
                                         <i class="material-icons text-muted">check</i>
-                                    </div>
-                                    <div class="list-group-item">
+                                    </div> -->
+                                    <!-- <div class="list-group-item">
                                         <a href="#" class="text-danger"><strong>Delete Course</strong></a>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div> -->
                             </div>
 
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="container page__container page-section">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
 
                         <div class="mb-heading d-flex align-items-center">
                             <h4 class="flex mb-0">Order of Sections</h4>
@@ -283,11 +301,11 @@
                         </div> -->
                         <!-- <a href="#" class="btn btn-outline-secondary mb-24pt mb-sm-0">Add Section</a> -->
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
 
                         <div class="mb-heading d-flex align-items-center">
                             <h4 class="flex mb-0">Main Video</h4>
-                            <!-- <a href="#" class="text-underline">Edit</a> -->
+                            <a href="#" class="text-underline">Edit</a>
                         </div>
  
                         <div class="card">
@@ -301,7 +319,7 @@
                                         data-cld-transformation='{ "width": 500, "crop": "limit" }'>
                                     </video>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="mb-heading d-flex align-items-center">
                             <h4 class="flex mb-0">Course Options</h4>
