@@ -40,6 +40,7 @@ loginForm.addEventListener("submit", e => {
     })
     .catch(err => {
       console.log(err);
+      alert(err);
     });
 });
 
@@ -100,7 +101,7 @@ auth.onAuthStateChanged(user => {
     //   snapshot => {
     //     setupGuides(snapshot.docs);
     //   },
-    console.log("admin added")
+    console.log("admin added");
   } else {
     location.href = "index.html";
     err => console.log(err.message);

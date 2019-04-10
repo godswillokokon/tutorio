@@ -32,7 +32,7 @@ signupForm.addEventListener("submit", e => {
           // console.log(idToken);
           // Send token to your backend via HTTPS
           // setupUI(cred);
-          
+
           return db
             .collection("users")
             .doc(cred.user.email)
@@ -47,14 +47,15 @@ signupForm.addEventListener("submit", e => {
       console.log(cred.user);
       const RegNum = document.querySelector("#signup-regnum");
 
-          let regNum = RegNum.value;
-          console.log(regNum);
-          
-          let regNumSession = sessionStorage.setItem("regnum", regNum);
+      let regNum = RegNum.value;
+      console.log(regNum);
+
+      let regNumSession = sessionStorage.setItem("regnum", regNum);
       location.href = "student-dashboard.html";
     })
     .catch(err => {
       console.log(err);
+      alert(err);
     });
 });
 

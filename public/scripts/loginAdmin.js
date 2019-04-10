@@ -37,14 +37,15 @@ loginForm.addEventListener("submit", e => {
       );
       const userName = document.querySelector("#login-username");
 
-          let username = userName.value;
-          console.log(username);
-          let usernameSession = sessionStorage.setItem("adminUsername", username);
+      let username = userName.value;
+      console.log(username);
+      let usernameSession = sessionStorage.setItem("adminUsername", username);
       // console.log(cred.user);
-          location.href = "instructor-dashboard.html";
+      location.href = "instructor-dashboard.html";
     })
     .catch(err => {
       console.log(err);
+      alert(err);
     });
 });
 
