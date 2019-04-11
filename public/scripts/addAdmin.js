@@ -88,6 +88,24 @@ auth.onAuthStateChanged(user => {
     console.log("admin not logged in");
   }
 });
+let currentUser = sessionStorage.getItem("admin");
+
+if (currentUser) {
+  console.log("admin logged in from auth");
+
+  // user.getIdTokenResult().then(idTokenResult => {
+  //   user.admin = idTokenResult.claims.admin;
+  //   setupUI(user);
+  // });
+  // db.collection("guides").onSnapshot(
+  //   snapshot => {
+  //     setupGuides(snapshot.docs);
+  //   },
+} else {
+  location.href = "index.html";
+  err => console.log(err.message);
+  console.log("admin not logged in from auth");
+}
 
 auth.onAuthStateChanged(user => {
   if (user) {
@@ -103,7 +121,7 @@ auth.onAuthStateChanged(user => {
     //   },
     console.log("admin added");
   } else {
-    location.href = "index.html";
+    // location.href = "index.html";
     err => console.log(err.message);
   }
 });

@@ -32,14 +32,16 @@ signupForm.addEventListener("submit", e => {
           // console.log(idToken);
           // Send token to your backend via HTTPS
           // setupUI(cred);
-          db.collection("users")
+
+          return db
+            .collection("users")
             .doc(cred.user.email)
             .set({
               regNum: RegNum.value
-            })
-            .then(() => {
-              location.href = "student-edit-account.html";
             });
+        })
+        .catch(function(error) {
+          console.log(error);
         });
 
       console.log(cred.user);
@@ -49,6 +51,7 @@ signupForm.addEventListener("submit", e => {
       console.log(regNum);
 
       let regNumSession = sessionStorage.setItem("regnum", regNum);
+      location.href = "student-edit-account.html";
     })
     .catch(err => {
       console.log(err);
@@ -62,7 +65,6 @@ function logout() {
     console.log("user is logged out");
     let currentUser = sessionStorage.removeItem("user");
     let regNumSession = sessionStorage.removeItem("regnum");
-    let userLevel = sessionStorage.removeItem("userLevel");
     // location.href = "index.html";
   });
   console.log("am logging out");
