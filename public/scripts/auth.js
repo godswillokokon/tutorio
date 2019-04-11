@@ -154,6 +154,8 @@ function logout() {
     console.log("user is logged out");
     let currentUser = sessionStorage.removeItem("user");
     let regNumSession = sessionStorage.removeItem("regnum");
+    let userLevel = sessionStorage.removeItem("userLevel");
+
     location.href = "index.html";
   });
   console.log("am logging out");

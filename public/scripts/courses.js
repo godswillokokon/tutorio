@@ -3,6 +3,7 @@ const setupContent = data => {
   let html = "";
   data.forEach(data => {
     let id = data.id;
+    let courseLevel = data.data().courseLevel;
     duration = data.data().duration;
     let mainDuration = duration / 60;
     const div = `<div class="col-12 col-sm-6 col-md-4 col-xl-3">
@@ -59,9 +60,10 @@ const setupContent = data => {
   });
   content.innerHTML = html;
 };
-
+let level = sessionStorage.getItem("userLevel");
 db.collection("class")
-  .orderBy("courseLevel", "asc")
+  // .orderBy("courseLevel", "asc")
+  .where("courseLevel", "==", level)
   .onSnapshot(
     doc => {
       let data = doc.docs;

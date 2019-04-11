@@ -21,27 +21,26 @@ loginForm.addEventListener("submit", e => {
         .auth()
         .currentUser.getIdToken(true)
         .then(function(idToken) {
+          // console.log(idToken);
           // Send token to your backend via HTTPS
-          let currentUsers = firebase.auth().currentUser;
-          console.log(currentUsers, "user");
-
-          console.log(idToken, "token");
-          console.log(currentUser, "session");
-        })
-        .catch(function(error) {
-          console.log(error);
+          // setupUI(cred);
         });
+      // let currentUsers = firebase.auth().currentUser;
+      // console.log(currentUsers, "user");
+
+      // console.log(idToken, "token");
+      // console.log(currentUser, "session");
       let currentUser = sessionStorage.setItem(
         "user",
         firebase.auth().currentUser
       );
       const RegNum = document.querySelector("#login-regnum");
 
-          let regNum = RegNum.value;
-          console.log(regNum);
-          let regNumSession = sessionStorage.setItem("regnum", regNum);
+      let regNum = RegNum.value;
+      console.log(regNum);
+      let regNumSession = sessionStorage.setItem("regnum", regNum);
       // console.log(cred.user);
-      location.href = "student-dashboard.html";
+      location.href = "student-edit-account.html";
     })
     .catch(err => {
       console.log(err);
