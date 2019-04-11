@@ -63,7 +63,7 @@ const setupContent = data => {
 let level = sessionStorage.getItem("userLevel");
 db.collection("class")
   // .orderBy("courseLevel", "asc")
-  .where("courseLevel", "==", level)
+  .where("courseLevel", "<=", level)
   .onSnapshot(
     doc => {
       let data = doc.docs;
