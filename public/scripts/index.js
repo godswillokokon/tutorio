@@ -10,7 +10,8 @@ const html = `
         
       `;
 accountDetails.innerHTML = html;
-
+var userNow = firebase.auth().currentUser;
+// console.log(id);
 // const setupUI = user => {
 //   if (user) {
 //     //acount info

@@ -17,6 +17,9 @@ fileUpload.addEventListener("change", event => {
   let lastName = document.getElementById("lastName").value;
   let level = document.getElementById("level").value;
   let userLevel = sessionStorage.setItem("userLevel", level);
+  sessionStorage.setItem("firstName", firstName);
+  sessionStorage.setItem("lastName", lastName);
+
   let file = event.target.files[0];
   let formData = new FormData();
   formData.append("file", file);
@@ -33,9 +36,12 @@ fileUpload.addEventListener("change", event => {
     .then(res => {
       console.log(res);
 
-      let imgPreview = res.data.secure_url;
+      let url = res.data.secure_url;
 
       date = res.data.created_at;
+      sessionStorage.setItem("url", url);
+      let photo = sessionStorage.getItem("url", url);
+      console.log(photo);
 
       return db
         .collection("profile")
