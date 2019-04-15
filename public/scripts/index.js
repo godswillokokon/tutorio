@@ -5,6 +5,16 @@ const accountDetails = document.querySelector(".account-details");
 let regnum = sessionStorage.getItem("regnum");
 
 // console.log(regnum);
+
+let upImgg = document.getElementById("upImg");
+
+let photoSSS = sessionStorage.getItem("url");
+
+const htmlUpImgg = `
+         <img width="32" height="32" class="rounded-circle" src="${photoSSS}" alt="student" style= "object-fit: contain;"/> 
+      `;
+upImgg.innerHTML = htmlUpImgg;
+
 const html = `
         <h2>Logged in as ${regNum}</h2>
         
