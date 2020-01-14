@@ -4,6 +4,7 @@ const setupContent = data => {
   data.forEach(data => {
     let id = data.id;
     let courseLevel = data.data().courseLevel;
+
     duration = data.data().duration;
     let mainDuration = duration / 60;
     const div = `<div class="col-12 col-sm-6 col-md-4 col-xl-3">
@@ -29,24 +30,24 @@ const setupContent = data => {
                                                         <div class="flex">
                                                             <a class="card-title" href="./dang-lesson.html?${id}">${
       data.data().courseTitle
-    }</a>
+      }</a>
                                                             <small class="text-50 font-weight-bold mb-4pt">${
-                                                              data.data()
-                                                                .Tutorusername
-                                                            }</small>
+      data.data()
+        .Tutorusername
+      }</small>
                                                         </div>
                                                        
                                                     </div>
                                                     <div class="d-flex">
                                                         <div class="rating flex">
                                                             Level : ${
-                                                              data.data()
-                                                                .courseLevel
-                                                            }
+      data.data()
+        .courseLevel
+      }
                                                         </div>
                                                         <small class="text-50">Length: ${Math.ceil(
-                                                          mainDuration
-                                                        )} Minutes</small>
+        mainDuration
+      )} Minutes</small>
                                                     </div>
                                                 </div>
                                             </div>

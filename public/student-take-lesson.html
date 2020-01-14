@@ -13,7 +13,7 @@
     <meta name="robots" content="noindex">
 
     <!-- Perfect Scrollbar -->
-    
+
     <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
 
     <!-- Fix Footer CSS -->
@@ -35,12 +35,9 @@
     <link type="text/css" href="assets/css/app.css" rel="stylesheet">
     <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
 
-<!-- cloudinary -->
+    <!-- cloudinary -->
 
-<link href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css" rel="stylesheet">
-
-
-
+    <link href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css" rel="stylesheet">
 
 </head>
 
@@ -58,23 +55,27 @@
 
         <!-- Header -->
 
-        <div id="header" class="mdk-header bg-dark js-mdk-header mb-0" data-effects="waterfall blend-background" data-fixed data-condenses>
+        <div id="header" class="mdk-header bg-dark js-mdk-header mb-0" data-effects="waterfall blend-background"
+            data-fixed data-condenses>
             <div class="mdk-header__content">
 
-                <div class="navbar navbar-expand-sm navbar-dark bg-dark pr-0 pr-md-16pt" id="default-navbar" data-primary>
+                <div class="navbar navbar-expand-sm navbar-dark bg-dark pr-0 pr-md-16pt" id="default-navbar"
+                    data-primary>
 
                     <!-- Navbar toggler -->
-                    <button class="navbar-toggler navbar-toggler-right d-block d-md-none" type="button" data-toggle="sidebar">
+                    <button class="navbar-toggler navbar-toggler-right d-block d-md-none" type="button"
+                        data-toggle="sidebar">
                         <!-- <span class="navbar-toggler-icon"></span> -->
                     </button>
 
                     <!-- Navbar Brand -->
                     <a href="index.html" class="navbar-brand">
-                        <img class="navbar-brand-icon mr-0 mr-md-8pt" src="assets/images/logo/white-100%402x.png" width="30" alt="Tutorio">
+                        <img class="navbar-brand-icon mr-0 mr-md-8pt" src="assets/images/logo/white-100%402x.png"
+                            width="30" alt="Tutorio">
                         <span class="d-none d-md-block">Tutorio</span>
                     </a>
 
-                   
+
                     <!-- Main Navigation -->
 
 
@@ -82,7 +83,8 @@
                     <nav class="nav navbar-nav ml-auto flex-nowrap">
                         <div class="nav-item dropdown d-none d-sm-flex ml-16pt">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="upImg">
-                                <img width="32" height="32" class="rounded-circle" src="assets/images/illustration/student/128/white.svg" alt="student" />
+                                <img width="32" height="32" class="rounded-circle"
+                                    src="assets/images/illustration/student/128/white.svg" alt="student" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
 
@@ -104,7 +106,7 @@
 
 
                         <!-- Notifications dropdown -->
-                        
+
                     </nav>
 
                     <!-- // END Main Navigation -->
@@ -121,19 +123,21 @@
 
 
 
-            <div class="navbar navbar-list navbar-submenu navbar-light border-0 navbar-expand-sm" style="white-space: nowrap;">
+            <div class="navbar navbar-list navbar-submenu navbar-light border-0 navbar-expand-sm"
+                style="white-space: nowrap;">
                 <div class="container flex-column flex-sm-row">
                     <nav class="nav navbar-nav navbar-list__item">
                         <div class="nav-item">
                             <div class="media flex-nowrap">
                                 <div class="media-left mr-16pt">
-                                    <a href="student-take-course.html"><img src="assets/images/paths/angular_64x64.png" width="40" alt="Angular" class="rounded"></a>
+                                    <a href="student-take-course.html"><img src="assets/images/paths/angular_64x64.png"
+                                            width="40" alt="Angular" class="rounded"></a>
                                 </div>
                                 <div class="media-body">
                                     <span id="title" class="card-title text-body mb-0"></span>
                                     <p class="lh-1 d-flex align-items-center mb-0">
-                                       
-                                        <span  id="tutor" class="text-50 small font-weight-bold mr-8pt"></span>
+
+                                        <span id="tutor" class="text-50 small font-weight-bold mr-8pt"></span>
                                         <!-- <span class="text-50 small">Software Engineer </span> -->
                                     </p>
                                 </div>
@@ -147,23 +151,27 @@
                         <!-- <li class="nav-item">
                             <a href="#" class="nav-link">Next</a>
                         </li> -->
-                      
+
                     </ul>
                 </div>
             </div>
             <div class="bg-gradient-primary pb-lg-64pt py-32pt">
                 <div class="container">
                     <nav class="course-nav">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" data-title="Quick Overview"><span class="material-icons text-primary">check_circle</span></a>
-                        <a data-toggle="tooltip" data-placement="bottom" data-title="Basic Setup" class="active" href="#"><span class="material-icons">account_circle</span></a>
-                        <a data-toggle="tooltip" data-placement="bottom" data-title="Main Activity" href="#"><span class="material-icons">play_circle_outline</span></a>
-                        <a data-toggle="tooltip" data-placement="bottom" data-title="Summary & Conclusion" href="#"><span class="material-icons">hourglass_empty</span></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" data-title="Quick Overview"><span
+                                class="material-icons text-primary">check_circle</span></a>
+                        <a data-toggle="tooltip" data-placement="bottom" data-title="Basic Setup" class="active"
+                            href="#"><span class="material-icons">account_circle</span></a>
+                        <a data-toggle="tooltip" data-placement="bottom" data-title="Main Activity" href="#"><span
+                                class="material-icons">play_circle_outline</span></a>
+                        <a data-toggle="tooltip" data-placement="bottom" data-title="Summary & Conclusion"
+                            href="#"><span class="material-icons">hourglass_empty</span></a>
                     </nav>
                     <div class="js-player embed-responsive embed-responsive-16by9 mb-32pt">
                         <div class="player embed-responsive-item">
                             <!-- <div class="player__content"> -->
-                        <video id="docplayer" controls  class="cld-video-player cld-fluid" ></video>
-                            
+                            <video id="docplayer" controls class="cld-video-player cld-fluid"></video>
+
                             <!-- <button id="play-prev" class="btn btn-default">Prev</button>
                             <button id="play-next" class="btn btn-default">Next</button>
                             
@@ -177,7 +185,7 @@
 
                             <!-- </div> -->
                             <div class="player__embed d-none">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -188,31 +196,32 @@
                     </div>
 
                     <p id="description" class="hero__lead measure-hero-lead text-white-50 mb-24pt"></p>
-                    <p  id="timeframe" class="h1 text-white-50 font-weight-light m-0"></p>
+                    <p id="timeframe" class="h1 text-white-50 font-weight-light m-0"></p>
                     <!-- <a href="#" class="btn btn-white">Resume lesson</a> -->
                 </div>
             </div>
-            
+
             <div class="navbar navbar-expand-sm navbar-submenu navbar-light navbar-list p-0 m-0 align-items-center">
                 <div class="container page__container">
                     <ul class="nav navbar-nav flex align-items-sm-center">
                         <li class="nav-item navbar-list__item">
                             <div class="media align-items-center">
                                 <span class="media-left mr-16pt">
-                                    <img src="assets/images/people/50/guy-6.jpg" width="40" alt="avatar" class="rounded-circle">
+                                    <img src="assets/images/people/50/guy-6.jpg" width="40" alt="avatar"
+                                        class="rounded-circle">
                                 </span>
                                 <div class="media-body" id="tutorsec">
-                                    <a class="card-title m-0" ></a>
+                                    <a class="card-title m-0"></a>
                                     <p class="text-50 lh-1 mb-0">Instructor</p>
                                 </div>
                             </div>
                         </li>
-                        <li id="date" class="nav-item navbar-list__item" >
-                            
+                        <li id="date" class="nav-item navbar-list__item">
+
                         </li>
                         <li id="level" class="nav-item navbar-list__item">
-                            <i  class="material-icons text-muted icon--left">assessment</i>
-                            
+                            <i class="material-icons text-muted icon--left">assessment</i>
+
                         </li>
                         <li class="nav-item ml-sm-auto text-sm-center flex-column navbar-list__item">
                             <!-- <div class="rating rating-24">
@@ -227,16 +236,57 @@
                     </ul>
                 </div>
             </div>
+            <div class="container page__container page-section">
+                <div class="mb-heading d-flex flex-column flex-sm-row align-items-sm-center">
+                    <h4 class="flex m-0"> Quizzes</h4>
+
+                </div>
+
+                <div class="card stack">
+                    <div class="list-group list-group-flush allQuizz">
+
+
+                    </div>
+                </div>
+
+            </div>
+            <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-functions.js"></script>
+            <script>
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyC-1WdIpSC7e79uQgq1pzKFArp3y_ykyD4",
+                    authDomain: "mini-udemy.firebaseapp.com",
+                    databaseURL: "https://mini-udemy.firebaseio.com",
+                    projectId: "mini-udemy",
+                    storageBucket: "mini-udemy.appspot.com",
+                    messagingSenderId: "658193953356"
+                };
+                firebase.initializeApp(config);
+                // make auth and firestore refrences
+                const auth = firebase.auth();
+                const db = firebase.firestore();
+                const functions = firebase.functions();
+
+            </script>
+            <script src="scripts/displayVideo.js"></script>
+            <script src="scripts/auth.js"></script>
+            <script src="scripts/index.js"></script>
+
 
             <div class="js-fix-footer bg-white border-top-2">
                 <div class="container page-section py-lg-48pt">
                     <div class="row">
-                       
+
                         <div class="col-md-12 text-md-right">
                             <p class="text-70 brand justify-content-md-end">
-                                <img class="brand-icon" src="assets/images/logo/black-70%402x.png" width="30" alt="Tutorio"> Tutorio
+                                <img class="brand-icon" src="assets/images/logo/black-70%402x.png" width="30"
+                                    alt="Tutorio"> Tutorio
                             </p>
-                            <p class="text-muted mb-0 mb-lg-16pt">Tutorio is an online learning platform that helps anyone achieve their personal and professional goals.</p>
+                            <p class="text-muted mb-0 mb-lg-16pt">Tutorio is an online learning platform that helps
+                                anyone achieve their personal and professional goals.</p>
                         </div>
                     </div>
                 </div>
@@ -246,13 +296,21 @@
                             <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
                                 <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
                                 <nav class="nav nav-links nav--flush">
-                                    <a href="#" class="nav-link mr-8pt"><img src="assets/images/icon/footer/facebook-square%402x.png" width="24" height="24" alt="Facebook"></a>
-                                    <a href="#" class="nav-link mr-8pt"><img src="assets/images/icon/footer/twitter-square%402x.png" width="24" height="24" alt="Twitter"></a>
-                                    <a href="#" class="nav-link mr-8pt"><img src="assets/images/icon/footer/vimeo-square%402x.png" width="24" height="24" alt="Vimeo"></a>
-                                    <a href="#" class="nav-link"><img src="assets/images/icon/footer/youtube-square%402x.png" width="24" height="24" alt="YouTube"></a>
+                                    <a href="#" class="nav-link mr-8pt"><img
+                                            src="assets/images/icon/footer/facebook-square%402x.png" width="24"
+                                            height="24" alt="Facebook"></a>
+                                    <a href="#" class="nav-link mr-8pt"><img
+                                            src="assets/images/icon/footer/twitter-square%402x.png" width="24"
+                                            height="24" alt="Twitter"></a>
+                                    <a href="#" class="nav-link mr-8pt"><img
+                                            src="assets/images/icon/footer/vimeo-square%402x.png" width="24" height="24"
+                                            alt="Vimeo"></a>
+                                    <a href="#" class="nav-link"><img
+                                            src="assets/images/icon/footer/youtube-square%402x.png" width="24"
+                                            height="24" alt="YouTube"></a>
                                 </nav>
                             </div>
-                            
+
                             <div class="col-md-4 text-md-right">
                                 <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
                                     <a href="#" class="text-white-70 text-underline mr-16pt">Terms</a>
@@ -272,38 +330,19 @@
     <!-- // END Header Layout -->
 
     <!-- Modal -->
-               
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-functions.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyC-1WdIpSC7e79uQgq1pzKFArp3y_ykyD4",
-            authDomain: "mini-udemy.firebaseapp.com",
-            databaseURL: "https://mini-udemy.firebaseio.com",
-            projectId: "mini-udemy",
-            storageBucket: "mini-udemy.appspot.com",
-            messagingSenderId: "658193953356"
-        };
-        firebase.initializeApp(config);
-        // make auth and firestore refrences
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-        const functions = firebase.functions();
 
-    </script>
-    <script src="scripts/auth.js"></script>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/displayVideo.js"></script>
+    <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
 
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
@@ -337,15 +376,17 @@
     <script src="assets/js/app-settings.js"></script>
 
 
-<script src="https://widget.cloudinary.com/global/all.js"></script>
-<!-- Cloudinary Video Player Dependencies -->
-<script src="https://unpkg.com/cloudinary-core/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
-<script src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.js" type="text/javascript"></script>
-<!-- 
+    <script src="https://widget.cloudinary.com/global/all.js"></script>
+    <!-- Cloudinary Video Player Dependencies -->
+    <script src="https://unpkg.com/cloudinary-core/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.js"
+        type="text/javascript"></script>
+    <!-- 
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.js"></script>
   <script type="text/javascript" src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.js"></script> -->
 
 </body>
 
+<script src="scripts/viewQuestion.js"></script>
 
 </html>

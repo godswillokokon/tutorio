@@ -2,11 +2,12 @@
 <html lang="en" dir="ltr">
 
 
+<!-- Mirrored from tutorio-bootstrap.frontendmatter.com/student-take-quiz.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Feb 2019 13:47:17 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin Dashboard</title>
+    <title>Student Take Quiz</title>
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -31,10 +32,48 @@
 
     <!-- App CSS -->
     <link type="text/css" href="assets/css/app.css" rel="stylesheet">
-   
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+
+
+
+
+
 </head>
 
 <body class="layout-navbar-mini-fixed-bottom">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="preloader">
@@ -65,28 +104,35 @@
                         <span class="d-none d-md-block">Tutorio</span>
                     </a>
 
-                   
+                    <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button>
+
+                    <form class="search-form search-form--black search-form-courses d-none d-md-flex" action="http://tutorio-bootstrap.frontendmatter.com/library-filters.html">
+                        <input type="text" class="form-control" placeholder="What would you like to learn?">
+                        <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
+                    </form>
+
                     <!-- Main Navigation -->
 
 
 
                     <nav class="nav navbar-nav ml-auto flex-nowrap">
                         <div class="nav-item dropdown d-none d-sm-flex ml-16pt">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="upImg">
-                                <img width="32" height="32" class="rounded-circle" src="assets/images/illustration/teacher/128/white.svg" alt="tutor" />
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <img width="32" height="32" class="rounded-circle" src="assets/images/people/50/guy-3.jpg" alt="student" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
 
-
-                                <div class="dropdown-header"><strong>Instructor</strong></div>
-                                <a class="dropdown-item" href="instructor-dashboard.html">Dashboard</a>
-                                <a class="dropdown-item" href="instructor-courses.html">Courses</a>
-                            <a class="dropdown-item" href="instructor-edit-quiz.html">Add Quizz</a>
+                                <div class="dropdown-header"><strong>Student</strong></div>
+                                <a class="dropdown-item" href="student-dashboard.html">Dashboard</a>
+                                <a class="dropdown-item" href="student-my-courses.html">My Courses</a>
+                                <a class="dropdown-item" href="student-quiz-results.html">Quiz Results</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="dropdown-header"><strong>Account</strong></div>
-                                <a class="dropdown-item" href="addAdmin.html">Add new Lecturer</a> 
-                                <a class="dropdown-item" href="index.html">Home</a>
-                                <a class="dropdown-item" onclick="logout()" href="#">Logout</a>
+                                <a class="dropdown-item" href="student-edit-account.html">Edit Account</a>
+                                <a class="dropdown-item" href="student-billing.html">Billing</a>
+                                <a class="dropdown-item" href="student-billing-history.html">Payments</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+
 
                             </div>
                         </div>
@@ -94,6 +140,116 @@
 
 
 
+                        <!-- Notifications dropdown -->
+                        <li class="nav-item dropdown dropdown-notifications dropdown-menu-sm-full">
+                            <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="badge badge-notifications badge-danger">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar class="position-relative">
+                                    <div class="dropdown-header"><strong>Messages</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong>Michelle</strong>
+                                                    <span class="text-black-70">Clients loved the new design.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong>Michelle</strong>
+                                                    <span class="text-black-70">🔥 Superb job..</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="dropdown-header"><strong>System notifications</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action border-left-3 border-left-danger">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">3 minutes ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-danger">account_circle</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 hours ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-success">group_add</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong>Adrian. D</strong>
+                                                    <span class="text-black-70">Wants to join your private group.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">1 day ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <!-- // END Notifications dropdown -->
                     </nav>
 
@@ -109,113 +265,128 @@
         <!-- Header Layout Content -->
         <div class="mdk-header-layout__content page-content ">
 
-            <div class="bg-gradient-primary border-bottom-white py-32pt">
-                <div class="container d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                    <img src="assets/images/illustration/teacher/128/white.svg" width="104" class="mr-md-32pt mb-32pt mb-md-0" alt="instructor">
-                    <div class="flex mb-32pt mb-md-0">
-                        <h2 class="text-white mb-0">Instructor</h2> 
-                        <p class="lead text-white-50 d-flex align-items-center admin-details">Unknown User</p>
-                    </div>
-                    <!-- <a href="student-edit-account.html" class="btn btn-outline-white">Edit account</a> -->
-                </div>
-            </div>
 
-            <div class="navbar navbar-expand-sm navbar-dark-white bg-gradient-primary p-sm-0 ">
+
+
+
+
+
+
+
+
+
+            <div class="navbar navbar-list navbar-submenu navbar-light border-0 navbar-expand-sm" style="white-space: nowrap;">
                 <div class="container page__container">
-
-                    <!-- Navbar toggler -->
-                    <button class="navbar-toggler ml-n16pt" type="button" data-toggle="collapse" data-target="#navbar-submenu2">
-                        <span class="material-icons">people_outline</span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbar-submenu2">
-                        <div class="navbar-collapse__content pb-16pt pb-sm-0">
-                            <ul class="nav navbar-nav">
-
-                                <li class="nav-item active">
-                                    <a href="instructor-dashboard.html" class="nav-link">Dashboard</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="instructor-courses.html" class="nav-link" >Courses</a>
-                                    
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link"href="instructor-quizzes.html">Quiz</a>
-                                </li>
-                                <!-- <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reports</a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="instructor-earnings.html">Earnings</a>
-                                        <a class="dropdown-item" href="instructor-statement.html">Statement</a>
-                                    </div>
-                                </li> -->
-
-                            </ul>
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <!-- <a href="instructor-profile.html" class="nav-link">Profile</a> -->
-                                </li>
-                            </ul>
+                    <nav class="nav navbar-nav">
+                        <div class="nav-item navbar-list__item">
+                            <a href="student-take-course.html" class="nav-link"><i class="material-icons icon--left">keyboard_backspace</i> Back to Course</a>
                         </div>
-                    </div>
+                        <div class="nav-item navbar-list__item">
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="mr-16pt">
+                                    <a href="student-take-course.html"><img src="assets/images/paths/angular_64x64.png" width="40" alt="Angular" class="rounded"></a>
+                                </div>
+                                <div class="flex">
+                                    <a href="student-take-course.html" class="card-title text-body mb-0">Angular Fundamentals</a>
+                                    <p class="lh-1 d-flex align-items-center mb-0">
+                                        <span class="text-50 small font-weight-bold mr-8pt">Elijah Murray</span>
+                                        <span class="text-50 small">Software Engineer and Developer</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
 
-            <div class="py-24pt bg-white border-bottom-2">
+            <div class="bg-gradient-primary pb-lg-64pt py-32pt">
                 <div class="container page__container">
+                    <nav class="course-nav">
+                        <a href="student-take-lesson.html" data-toggle="tooltip" data-placement="bottom" data-title="Getting Started with Angular: Introduction"><span class="material-icons text-primary">check_circle</span></a>
+                        <a data-toggle="tooltip" data-placement="bottom" data-title="Getting Started with Angular: Introduction to TypeScript" href="student-take-lesson.html"><span class="material-icons text-primary">check_circle</span></a>
+                        <a data-toggle="tooltip" data-placement="bottom" data-title="Getting Started with Angular: Comparing Angular to AngularJS" href="student-take-lesson.html"><span class="material-icons text-primary">check_circle</span></a>
+                        <a class="active" href="student-take-quiz.html" data-toggle="tooltip" data-placement="bottom" data-title="Quiz: Getting Started with Angular"><span class="material-icons">account_circle</span></a>
+                    </nav>
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="border-1 border-left-3 border-left-accent rounded text-70 text-center mb-lg-0">
-                                <div class="card-body">
-                                    Earnings this month
-                                    <p class="lead text-body mb-0"><strong>$1,569.00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="border rounded text-70 text-center mb-lg-0">
-                                <div class="card-body">
-                                    Account Balance
-                                    <p class="lead text-body mb-0"><strong>$3,917.80</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="border rounded text-70 text-center mb-lg-0">
-                                <div class="card-body">
-                                    Total Sales
-                                    <p class="lead text-body mb-0"><strong>$10,211.50</strong></p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="d-flex flex-wrap align-items-end justify-content-end mb-16pt">
+                        <h1 class="text-white flex m-0">Question 1 of 5</h1>
+                        <p class="h1 text-white-50 font-weight-light m-0">00:14</p>
                     </div>
 
+                    <p class="hero__lead measure-hero-lead text-white-50">An angular 2 project written in typescript is* transpiled to javascript duri*ng the build process. Which of the following additional features are provided to the developer while programming on typescript over javascript?</p>
                 </div>
             </div>
 
-            <div class="container page__container page-section">
-
-                <div class="mb-heading d-flex align-items-end">
-                    <div class="flex">
-                        <h4 class="card-title">Earnings</h4>
-                        <p class="card-subtitle">Last Week vs. Previous Week</p>
+            <div class="navbar navbar-expand-md navbar-list navbar-submenu navbar-light " style="white-space: nowrap;">
+                <div class="container page__container">
+                    <ul class="nav navbar-nav flex navbar-list__item">
+                        <li class="nav-item">
+                            <i class="material-icons text-50 mr-8pt">tune</i>
+                            Choose the correct answer below:
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav ml-sm-auto navbar-list__item">
+                        <div class="nav-item d-flex flex-column flex-sm-row ml-sm-16pt">
+                            <a href="student-quiz-result-details.html" class="btn justify-content-center btn-outline-secondary w-100 w-sm-auto mb-16pt mb-sm-0">Skip Quiz</a>
+                            <a href="student-take-lesson.html" class="btn justify-content-center btn-outline-secondary w-100 w-sm-auto mb-16pt mb-sm-0 ml-sm-16pt">Review Video</a>
+                            <a href="student-quiz-result-details.html" class="btn justify-content-center btn-accent w-100 w-sm-auto mb-16pt mb-sm-0 ml-sm-16pt">Next Question <i class="material-icons icon--right">keyboard_arrow_right</i></a>
+                        </div>
                     </div>
-                    <!-- <a href="instructor-earnings.html" class="text-underline">View Earnings</a> -->
                 </div>
-                <div class="card p-24pt mb-32pt">
-                    <div class="chart" style="height: 320px;">
-                        <canvas id="earningsChart" class="chart-canvas"></canvas>
-                    </div>
-                </div>
+            </div>
 
-                
+            <div class="container page__container">
+                <div class="page-section">
+                    <h4 class="question"></h4>
+                    <form class="options">
+                    
+                   
+                    <button type="submit" class="btn justify-content-center btn-accent">Submit<i class="material-icons icon--right">keyboard_arrow_right</i></a>
+                           </button>
+
+                    </form>
+
+                    <p class="text-50 mb-0">Note: Read carefully before answering.</p>
                 </div>
-                   <div class="js-fix-footer bg-white border-top-2">
+            </div>
+
+
+
+            <div class="js-fix-footer bg-white border-top-2">
                 <div class="container page-section py-lg-48pt">
                     <div class="row">
-                       
-                        <div class="col-md-12 text-md-right">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-6 col-md-4 mb-24pt mb-md-0">
+                                    <h4 class="text-70">Learn</h4>
+                                    <nav class="nav nav-links nav--flush flex-column">
+                                        <a class="nav-link" href="library.html">Library</a>
+                                        <a class="nav-link" href="library-featured.html">Featured</a>
+                                        <a class="nav-link" href="library-filters.html">Explore</a>
+                                        <a class="nav-link" href="paths.html">Learning Paths</a>
+                                    </nav>
+                                </div>
+                                <div class="col-6 col-md-4 mb-24pt mb-md-0">
+                                    <h4 class="text-70">Join us</h4>
+                                    <nav class="nav nav-links nav--flush flex-column">
+                                        <a class="nav-link" href="pricing.html">Pricing</a>
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="signup.html">Sign Up</a>
+                                        <a class="nav-link" href="signup-payment.html">Payment</a>
+                                    </nav>
+                                </div>
+                                <div class="col-6 col-md-4 mb-32pt mb-md-0">
+                                    <h4 class="text-70">Community</h4>
+                                    <nav class="nav nav-links nav--flush flex-column">
+                                        <a class="nav-link" href="student-discussions.html">Discussions</a>
+                                        <a class="nav-link" href="student-discussions-ask.html">Ask Question</a>
+                                        <a class="nav-link" href="student-profile.html">Student Profile</a>
+                                        <a class="nav-link" href="instructor-profile.html">Instructor Profile</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-md-right">
                             <p class="text-70 brand justify-content-md-end">
                                 <img class="brand-icon" src="assets/images/logo/black-70%402x.png" width="30" alt="Tutorio"> Tutorio
                             </p>
@@ -235,7 +406,9 @@
                                     <a href="#" class="nav-link"><img src="assets/images/icon/footer/youtube-square%402x.png" width="24" height="24" alt="YouTube"></a>
                                 </nav>
                             </div>
-                            
+                            <div class="col-md-6 col-sm-4 mb-24pt mb-md-0 d-flex align-items-center">
+                                <a href="#" class="btn btn-outline-white">English <span class="icon--right material-icons">arrow_drop_down</span></a>
+                            </div>
                             <div class="col-md-4 text-md-right">
                                 <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
                                     <a href="#" class="text-white-70 text-underline mr-16pt">Terms</a>
@@ -254,6 +427,388 @@
     </div>
     <!-- // END Header Layout -->
 
+    <div class="navbar navbar-expand-sm navbar-mini navbar-dark fixed-bottom bg-dark d-none d-md-flex p-0" id="demo-navbar">
+        <div class="container-fluid">
+
+            <!-- Main Navigation -->
+            <ul class="nav navbar-nav flex-nowrap">
+                <li class="nav-item dropup">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Catalog</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="index.html">Home page</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="library.html">Library</a>
+                        <a class="dropdown-item" href="library-featured.html">Featured</a>
+                        <a class="dropdown-item" href="library-development.html">Development</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="library-filters.html">Explore</a>
+                        <a class="dropdown-item" href="library-filters-list.html">Explore List</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="paths.html">Learning Paths</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="course.html">Course Details</a>
+                        <a class="dropdown-item" href="lesson.html">Lesson Details</a>
+                        <a class="dropdown-item" href="path.html">Path Details</a>
+                    </div>
+                </li>
+                <li class="nav-item dropup active">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="student-dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="student-my-courses.html">My Courses</a>
+                        <a class="dropdown-item" href="student-take-course.html">Take Course</a>
+                        <a class="dropdown-item" href="student-take-lesson.html">Take Lesson</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item active" href="student-take-quiz.html">Take Quiz</a>
+                        <a class="dropdown-item" href="student-quiz-result-details.html">Quiz Result</a>
+                        <a class="dropdown-item" href="student-quiz-results.html">My Quizzes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="student-path-assessment.html">Skill Assessment</a>
+                        <a class="dropdown-item" href="student-path-assessment-result.html">Skill Result</a>
+                    </div>
+                </li>
+                <li class="nav-item dropup">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Instructor</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="instructor-dashboard.html">Dashboard</a>
+                        <a class="dropdown-item" href="instructor-courses.html">Courses</a>
+                        <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="instructor-edit-course.html">Edit Course</a>
+                        <a class="dropdown-item" href="instructor-edit-quiz.html">Edit Quiz</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="instructor-earnings.html">Earnings</a>
+                        <a class="dropdown-item" href="instructor-statement.html">Statement</a>
+                    </div>
+                </li>
+                <li class="nav-item dropup">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="student-discussions.html">Discussions</a>
+                        <a class="dropdown-item" href="student-discussion.html">Discussion Details</a>
+                        <a class="dropdown-item" href="student-discussions-ask.html">Ask Question</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="student-profile.html">Student Profile</a>
+                        <a class="dropdown-item" href="instructor-profile.html">Instructor Profile</a>
+                    </div>
+                </li>
+                <li class="nav-item dropup">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="pricing.html">Pricing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Login</a>
+                        <a class="dropdown-item" href="signup.html">Signup</a>
+                        <a class="dropdown-item" href="signup-payment.html">Payment</a>
+                        <a class="dropdown-item" href="reset-password.html">Reset Password</a>
+                        <a class="dropdown-item" href="change-password.html">Change Password</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="student-edit-account.html">Edit Account</a>
+                        <a class="dropdown-item" href="student-edit-account-profile.html">Profile &amp; Privacy</a>
+                        <a class="dropdown-item" href="student-edit-account-notifications.html">Email Notifications</a>
+                        <a class="dropdown-item" href="student-edit-account-password.html">Account Password</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="student-billing.html">Subscription</a>
+                        <a class="dropdown-item" href="student-billing-upgrade.html">Upgrade Account</a>
+                        <a class="dropdown-item" href="student-billing-payment.html">Payment Information</a>
+                        <a class="dropdown-item" href="student-billing-history.html">Payment History</a>
+                        <a class="dropdown-item" href="student-billing-invoice.html">Invoice</a>
+                    </div>
+                </li>
+                <li class="nav-item dropup">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Components</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="ui-buttons.html">Buttons</a>
+                        <a class="dropdown-item" href="ui-charts.html">Charts</a>
+                        <a class="dropdown-item" href="ui-avatars.html">Avatars</a>
+                        <a class="dropdown-item" href="ui-forms.html">Forms</a>
+                        <a class="dropdown-item" href="ui-loaders.html">Loaders</a>
+                        <a class="dropdown-item" href="ui-tables.html">Tables</a>
+                        <a class="dropdown-item" href="ui-cards.html">Cards</a>
+                        <a class="dropdown-item" href="ui-icons.html">Icons</a>
+                        <a class="dropdown-item" href="ui-tabs.html">Tabs</a>
+                        <a class="dropdown-item" href="ui-alerts.html">Alerts</a>
+                        <a class="dropdown-item" href="ui-badges.html">Badges</a>
+                        <a class="dropdown-item" href="ui-progress.html">Progress</a>
+                        <a class="dropdown-item" href="ui-pagination.html">Pagination</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- // END Main Navigation -->
+
+        </div>
+    </div>
+    <!-- drawer -->
+    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+        <div class="mdk-drawer__content">
+            <div class="sidebar sidebar-dark sidebar-left" data-perfect-scrollbar>
+                <div class="sidebar-p-a sidebar-b-b sidebar-m-b pt-0">
+
+                    <!-- Brand -->
+                    <a href="index.html" class="sidebar-brand">
+                        <img class="sidebar-brand-icon" src="assets/images/logo/white-100.svg" width="30" alt="Tutorio">
+                        <span>Tutorio</span>
+                    </a>
+                    <!-- // END Brand -->
+
+                    <!-- Search -->
+                    <form action="http://tutorio-bootstrap.frontendmatter.com/library-filters.html" class="search-form search-form--black">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
+                    </form>
+
+                </div>
+
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="index.html">Home Page</a>
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#catalog_menu">
+                            Catalog
+                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                        </a>
+                        <ul class="sidebar-submenu collapse sm-indent" id="catalog_menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="library.html">Library</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="library-featured.html">Featured</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="library-development.html">Development</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="library-filters.html">Explore</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="library-filters-list.html">Explore List</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="paths.html">Learning Paths</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="course.html">Course Details</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="lesson.html">Lesson Details</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="path.html">Path Details</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-heading">Pages</div>
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-item active open">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#student_menu">
+                            Student
+                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                        </a>
+                        <ul class="sidebar-submenu collapse show sm-indent" id="student_menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-my-courses.html">My Courses</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-quiz-results.html">My Quizzes</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-take-course.html">Take Course</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-take-lesson.html">Take Lesson</a>
+                            </li>
+                            <li class="sidebar-menu-item active">
+                                <a class="sidebar-menu-button" href="student-take-quiz.html">Take Quiz</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-quiz-result-details.html">Quiz Result</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-path-assessment.html">Skill Assessment</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-path-assessment-result.html">Skill Result</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#instructor_menu">
+                            Instructor
+                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                        </a>
+                        <ul class="sidebar-submenu collapse sm-indent" id="instructor_menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-courses.html">Manage Courses</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-quizzes.html">Manage Quizzes</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-edit-course.html">Edit Course</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-edit-quiz.html">Edit Quiz</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-earnings.html">Earnings</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-statement.html">Statement</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#account_menu">
+                            Account
+                            <span class="sidebar-menu-badge badge badge-primary badge-notifications ml-auto">2</span>
+                            <span class="sidebar-menu-toggle-icon"></span>
+                        </a>
+                        <ul class="sidebar-submenu collapse sm-indent" id="account_menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="login.html">Login</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="signup.html">Signup</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="signup-payment.html">Payment</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="reset-password.html">Reset Password</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="change-password.html">Change Password</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-edit-account.html">Edit Account</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-edit-account-profile.html">Profile &amp; Privacy</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-edit-account-notifications.html">Email Notifications</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-edit-account-password.html">Account Password</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-billing.html">Subscription</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-billing-upgrade.html">Upgrade Account</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-billing-payment.html">Payment Information</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-billing-history.html">Payment History</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-billing-invoice.html">Invoice</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#community_menu">
+                            Community
+                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                        </a>
+                        <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-discussions.html">Discussions</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-discussion.html">Discussion Details</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-discussions-ask.html">Ask Question</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="student-profile.html">Student Profile</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="instructor-profile.html">Instructor Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="sidebar-heading">Components</div>
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">
+                            Components
+                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                        </a>
+                        <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-buttons.html">Buttons</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-charts.html">Charts</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-avatars.html">Avatars</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-forms.html">Forms</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-loaders.html">Loaders</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-tables.html">Tables</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-cards.html">Cards</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-icons.html">Icons</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-tabs.html">Tabs</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-alerts.html">Alerts</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-badges.html">Badges</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-progress.html">Progress</a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="ui-pagination.html">Pagination</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- // END drawer -->
+    <!-- App Settings FAB -->
+    <div id="app-settings">
+        <app-settings theme-active="blue-light" :theme-location="{
+      'blue-light': 'http://tutorio-bootstrap.frontendmatter.com/student-take-quiz.html',
+      'blue-dark': 'http://tutorio-dark.frontendmatter.com/student-take-quiz.html',
+      'teal-light': 'http://tutorio-teal.frontendmatter.com/student-take-quiz.html',
+      'teal-dark': 'http://tutorio-teal-dark.frontendmatter.com/student-take-quiz.html'
+    }" sidebar-variant="bg-transparent border-0"></app-settings>
+    </div>
     <!-- Modal -->
     <div class="modal courses-modal" id="courses" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -802,29 +1357,7 @@
             </div>
         </div>
     </div>
-     <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-functions.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyC-1WdIpSC7e79uQgq1pzKFArp3y_ykyD4",
-            authDomain: "mini-udemy.firebaseapp.com",
-            databaseURL: "https://mini-udemy.firebaseio.com",
-            projectId: "mini-udemy",
-            storageBucket: "mini-udemy.appspot.com",
-            messagingSenderId: "658193953356"
-        };
-        firebase.initializeApp(config);
-        // make auth and firestore refrences
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-        const functions = firebase.functions();
 
-    </script>
-    <script src="scripts/authAdmin.js"></script>
-    <script src="scripts/indexAdmin.js"></script>
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
 
@@ -853,30 +1386,14 @@
     <!-- Highlight.js -->
     <script src="assets/js/hljs.js"></script>
 
-   
+    <!-- App Settings (safe to remove) -->
+    <script src="assets/js/app-settings.js"></script>
 
-    <!-- Global Settings -->
-    <script src="assets/js/settings.js"></script>
 
-    <!-- Moment.js -->
-    <script src="assets/vendor/moment.min.js"></script>
-    <script src="assets/vendor/moment-range.min.js"></script>
 
-    <!-- Chart.js -->
-    <script src="assets/vendor/Chart.min.js"></script>
-
-    <!-- UI Charts Page JS -->
-    <script src="assets/js/chartjs-rounded-bar.js"></script>
-    <script src="assets/js/chartjs.js"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="assets/js/page.instructor-dashboard.js"></script>
-
-    <!-- List.js -->
-    <script src="assets/vendor/list.min.js"></script>
-    <script src="assets/js/list.js"></script>
 
 </body>
 
 
+<!-- Mirrored from tutorio-bootstrap.frontendmatter.com/student-take-quiz.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Feb 2019 13:47:17 GMT -->
 </html>

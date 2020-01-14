@@ -15,6 +15,10 @@ db.collection("class")
   .doc(id)
   .get()
   .then(doc => {
+    let courseLevel = doc.data().courseLevel;
+
+    let sessionLevel = sessionStorage.setItem("sLevel", courseLevel);
+    console.log(courseLevel, "DS");
     lesson = doc.data().lesson;
     // console.log(docplayer);
     docplayer.src = lesson;
@@ -24,15 +28,11 @@ db.collection("class")
     duration = doc.data().duration;
     let mainDuration = duration / 60;
     username = doc.data().username;
-    console.log("lesson : ", lesson);
-    console.log("Course Title : ", courseTitle);
-    console.log("Course Description", courseDescription);
-    console.log("date", date);
-    console.log("duration", mainDuration);
+
     const htmlTitle = `
         <span id="title" class="card-title text-body mb-0">${
-          doc.data().courseTitle
-        }</span>
+      doc.data().courseTitle
+      }</span>
       `;
     title.innerHTML = htmlTitle;
 
@@ -49,8 +49,8 @@ db.collection("class")
     description.innerHTML = htmlDescription;
     const htmlTime = `
        <p id="timeframe" class="h2 text-white-50 font-weight-light m-0">Video length : ${Math.ceil(
-         mainDuration
-       )} Minutes</p>
+      mainDuration
+    )} Minutes</p>
       `;
     timeframe.innerHTML = htmlTime;
     const htmlLevel = `
@@ -62,8 +62,8 @@ db.collection("class")
     level.innerHTML = htmlLevel;
     const htmltutor = `
         <span id="tutor" class="text-50 small font-weight-bold mr-8pt"> ${
-          doc.data().Tutorusername
-        }</span>
+      doc.data().Tutorusername
+      }</span>
       `;
     tutor.innerHTML = htmltutor;
     const htmltutorsec = `
