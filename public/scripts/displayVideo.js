@@ -1,6 +1,8 @@
 
 let docplayer = document.getElementById("docplayer");
 
+
+
 let title = document.getElementById("title");
 let intro = document.getElementById("intro");
 let description = document.getElementById("description");
@@ -22,11 +24,44 @@ db.collection("class")
     lesson = doc.data().lesson;
     // console.log(docplayer);
     docplayer.src = lesson;
+
+
     courseTitle = doc.data().courseTitle;
     courseDescription = doc.data().courseDescription;
     date = doc.data().date;
     duration = doc.data().duration;
+    tutor = doc.data().Tutorusername
+
     let mainDuration = duration / 60;
+    let half = duration / 2;
+    let attendance = half * 1000;
+
+    setTimeout(function () {
+      let time = new Date;
+      let regnum = sessionStorage.getItem("regnum");
+
+      console.log("updated");
+      return db
+        .collection("attendance")
+        .doc()
+        .set({
+          courseLevel,
+          courseTitle,
+          courseDescription,
+          time,
+          regnum,
+          tutor
+
+        })
+        .catch(err => {
+          console.error(err);
+          alert("err : ", err)
+        });
+
+
+
+    }, attendance);
+
     username = doc.data().username;
 
     const htmlTitle = `

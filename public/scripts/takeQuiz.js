@@ -65,7 +65,7 @@ const options = document.querySelector(".options");
 options.addEventListener("submit", e => {
   e.preventDefault();
 
-
+  let date = new Date();
   let a = document.getElementById("customCheck01").checked;
   let b = document.getElementById("customCheck02").checked;
   let c = document.getElementById("customCheck03").checked;
@@ -112,12 +112,16 @@ options.addEventListener("submit", e => {
       regnumQ,
       titleQ,
       teachQ,
+      date
 
     })
+
     .catch(err => {
       console.error(err);
       alert("err : ", err)
     })
+
+
 
 
 });

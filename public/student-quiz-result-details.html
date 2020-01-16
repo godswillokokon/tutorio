@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 
 
-<!-- Mirrored from tutorio-bootstrap.frontendmatter.com/student-quiz-result-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Feb 2019 13:47:17 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -300,9 +299,9 @@
                 <div class="mdk-box__content">
                     <div class="py-64pt text-center text-sm-left">
                         <div class="container d-flex flex-column justify-content-center align-items-center">
-                            <p class="lead text-white-50 measure-lead-max mb-0">Submited on 02 Jan 2019</p>
-                            <h1 class="text-white mb-24pt">Your Score: 350</h1>
-                            <a href="student-take-quiz.html" class="btn btn-outline-white">Restart quiz</a>
+                            <p class="lead text-white-50 measure-lead-max mb-0 Ques"></p>
+                            <h1 class="text-white mb-24pt Score"></h1>
+                            <a href="student-my-courses.html" class="btn btn-outline-white">Take Another Lesson</a>
                         </div>
                     </div>
                 </div>
@@ -310,48 +309,19 @@
             <div class="navbar navbar-expand-sm navbar-light navbar-submenu navbar-list p-0 m-0 align-items-center">
                 <div class="container page__container">
                     <ul class="nav navbar-nav flex align-items-sm-center">
-                        <li class="nav-item navbar-list__item">350/450 Score</li>
-                        <li class="nav-item navbar-list__item">
-                            <i class="material-icons text-muted icon--left">schedule</i>
-                            12 minutes
+                        <li class="nav-item navbar-list__item TitleLesson"></li>
+                        <li class="nav-item navbar-list__item Teacher">
+                           
+                            
                         </li>
-                        <li class="nav-item navbar-list__item">
-                            <i class="material-icons text-muted icon--left">assessment</i>
-                            Intermediate
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
 
 
 
-            <div class="container page__container">
-                <div class="border-left-2 page-section pl-32pt">
-
-                    <div class="d-flex align-items-center page-num-container mb-16pt">
-                        <div class="page-num">2</div>
-                        <h4>Question 2 of 5</h4>
-                    </div>
-
-                    <p class="text-70 mb-32pt mb-lg-48pt">An angular 2 project written in typescript is* transpiled to javascript duri*ng the build process. Which of the following additional features are provided to the developer while programming on typescript over javascript?</p>
-
-                    <ul class="list-quiz mb-32pt mb-lg-64pt">
-                        <li class="list-quiz-item">
-                            <span class="list-quiz-badge">A</span>
-                            <span class="list-quiz-text">Ability to use newer syntax and offers reliability</span>
-                        </li>
-                        <li class="list-quiz-item active">
-                            <span class="list-quiz-badge list-quiz-badge-success"><i class="material-icons">check</i></span>
-                            <span class="list-quiz-text">Compatibility</span>
-                        </li>
-                        <li class="list-quiz-item">
-                            <span class="list-quiz-badge list-quiz-badge-error">C</span>
-                            <span class="list-quiz-text">Usage of missing features</span>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
+            
 
 
 
@@ -1360,6 +1330,31 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-functions.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC-1WdIpSC7e79uQgq1pzKFArp3y_ykyD4",
+            authDomain: "mini-udemy.firebaseapp.com",
+            databaseURL: "https://mini-udemy.firebaseio.com",
+            projectId: "mini-udemy",
+            storageBucket: "mini-udemy.appspot.com",
+            messagingSenderId: "658193953356"
+        };
+        firebase.initializeApp(config);
+        // make auth and firestore refrences
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const functions = firebase.functions();
+
+    </script>
+   
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/viewScore.js"></script>
 
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
