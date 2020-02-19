@@ -8,12 +8,13 @@ const QuizzsetupContent = data => {
     let question = data.data().question;
     let level = data.data().level;
     let courseTitle = data.data().courseTitle;
+    let tutor = data.data().tutor;
 
     const div = `
    <div class="list-group-item d-flex align-items-center">
-                            <a class="text-body flex" href="instructor-edit-quiz.html">Question : ${question}</a>
-                            <a class="text-body flex" href="instructor-edit-quiz.html">Level : ${level}</a>
-                            <a class="text-body flex" href="instructor-edit-quiz.html">Course : ${courseTitle}</a>
+                            <a class="text-body flex">Question : ${question}</a>
+                            <a class="text-body flex">Level : ${level}</a>
+                            <a class="text-body flex">Course : ${courseTitle}</a>
                            
                         </div>
     `;
@@ -21,10 +22,10 @@ const QuizzsetupContent = data => {
   });
   allQuizz.innerHTML = html;
 };
-let level = sessionStorage.getItem("userLevel");
+let tuttzz = sessionStorage.getItem("adminUsername");
 db.collection("quizz")
-  .orderBy("question", "asc")
-  // .where("courseLevel", "<=", level)
+  .orderBy("courseTitle", "asc")
+  .where("tutor", "==", tuttzz)
   .onSnapshot(
     doc => {
       let data = doc.docs;

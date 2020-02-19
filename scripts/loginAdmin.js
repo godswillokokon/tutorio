@@ -20,7 +20,7 @@ loginForm.addEventListener("submit", e => {
       firebase
         .auth()
         .currentUser.getIdToken(true)
-        .then(function(idToken) {
+        .then(function (idToken) {
           // Send token to your backend via HTTPS
           let currentUsers = firebase.auth().currentUser;
           console.log(currentUsers, "user");
@@ -28,7 +28,7 @@ loginForm.addEventListener("submit", e => {
           console.log(idToken, "token");
           console.log(currentUser, "session");
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log(error);
         });
       let currentUser = sessionStorage.setItem(
@@ -41,7 +41,7 @@ loginForm.addEventListener("submit", e => {
       console.log(username);
       let usernameSession = sessionStorage.setItem("adminUsername", username);
       // console.log(cred.user);
-      location.href = "instructor-dashboard.html";
+      location.href = "instructor-courses.html";
     })
     .catch(err => {
       console.log(err);

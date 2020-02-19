@@ -28,11 +28,12 @@ const VQsetupContent = data => {
   allQuiz.innerHTML = html;
 };
 let slevel = sessionStorage.getItem("sLevel");
+let t = sessionStorage.getItem("couresT");
 console.log(slevel, "level");
 
 db.collection("quizz")
   // .orderBy("dateCreated", "asc")
-  .where("level", "==", slevel)
+  .where("courseTitle", "==", t)
   .onSnapshot(
     doc => {
       let data = doc.docs;
