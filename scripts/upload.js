@@ -8,6 +8,10 @@ let fileUpload = document.getElementById("file-upload");
 let Tutorusername = sessionStorage.getItem("adminUsername");
 let Tutoremail = sessionStorage.getItem("adminEmail");
 
+function run(params) {
+
+    location.href = "instructor-courses.html"
+}
 
 fileUpload.addEventListener("change", event => {
     let courseDescription = document.getElementById("courseDescription").value;
@@ -47,7 +51,7 @@ fileUpload.addEventListener("change", event => {
                     courseLevel,
                     Tutorusername,
                     Tutoremail
-                }, location.href = "instructor-courses.html")
+                }, alert("Course Added Succesfully"))
                 .catch(err => {
                     console.error(err);
                 });
